@@ -1,0 +1,2492 @@
+Hệ phân tán
+Chương Ï : Tổng quan về hệ phân tán.
+I.I Định nghĩa.
+Có nhiều định nghĩa về hệ phân tán
+Định nghĩa 1: Hệ phân tán là tập hợp các máy tính tự trị được kết nối với nhau
+bởi một mạng máy tính và được cải đặt phần mềm hệ phân tán.
+Định nghĩa 2: Hệ phần tán là một hệ thông có chức năng và dữ liệu phân tán
+trên các trạm (máy tính) được kết nối với nhau bởi một mạng máy tính.
+Định nghĩa 3: Hệ phân tân là một tập các máy tính độc lập giao tiếp VỚI h8ưỜI
+dùng như một hệ thông thống nhất, toàn vẹn.
+Như vậy, có thê nói : Hệ phân tán = mạng máy tính + phần mềm hệ phân tán.
+Phân loại hệ phân tán:
+Trước đây, hệ phần tán được chia thành ba loại : hệ điều hảnh hệ phân tán, cơ
+sở dữ liệu hệ phân tán và các hệ thông tính toán hệ phân tản.
+Ngày nay, hệ phần tản được phần chia như sau:
+- Hệ phân tán mang tính hệ thông: hệ điều hành phân tán.
+- Hệ phân tán mang tính ứng dụng: các hệ thống truyền tin phân tán.
+
+1.2 Mục tiêu của hệ phân tán.
+a. Kêt nỗi người sử dụng và tải nguyên
+CHải quyết bài toán chia sẻ tải nguyên trong hệ thông (resource sharIng).
+
+b. Tính trong suốt
+Ấn giấu sự rời rạc và những nhược điểm nêu có của hệ phân tán đối với người
+sử dụng (end-user ) và những nhả lập trình ứng dụng (applicatlon programmer).
+
+Theo tiêu chuẩn ISO cho hệ phân tán ISO / IS / 10746 tên lả “Open distributed
+
+processing reference model" 1995 đã cụ thê hóa tám dạng trong suỐt:
+
+Trong suốt truy cập (Access transparency): che giấu sự khác biệt về cách biêu
+diễn và cách truy cập tài nguyên.
+
+Trong suốt về VỊ trí (Location transparency): che giấu vị trí của tải nguyên. Hai
+dạng trong suốt vừa trình bảy được gọi chung lả trong suốt mạng (network
+fransparency).
+
+Trong suốt di trũ (Migration transparency): che giấu khả năng chuyên vị trí của
+tải nguyên.
+
+Trong suốt về việc định vị lại (Relocation transparency): che giấu việc đi
+chuyển của tải nguyên khi đang được sử dụng.
+
+Trong suốt nhân bản (Replication transparenecy): che giấu tình trạng tình trạng
+sử dụng bản sao của tài nguyên.
+
+Che giâu sự che sẻ tải nguyên tương tranh (Concurency transparency).
+
+Trong suốt sự cô (Failure transparency): che giâu lỗi hệ thống nếu có.
+
+Trong suốt khả năng di chuyên tải nguyên (Persistence transparency): che giấu
+việc di chuyên tài nguyên từ bộ nhớ ngoài vảo bộ nhớ trong vả ngược lại.
+
+c. Lĩnh mở (Openness).
+Hệ phân tán được gọi là mở nêu nó cung cấp các dịch vụ theo các quy tắc
+chuân mô tả cú pháp vả ngữ nghĩa của dịch vụ đó.
+Thông thường trong hệ phần tán các dịch vụ thường đặc tả qua các giao diện
+
+bằng ngôn ngữ đặc tả giao diện (Interface Definition Language- IDL). Vì thế
+chỉ quan tâm đến cú pháp. Nó cho phép các dịch vụ khác nhau cùng chung
+sống. Nếu các g1ao diện của hệ phân tán được đặc tả đầy đủ và đúng đắn.
+
+Xết hai khái niệm của hệ phân tán là khải niệm liên tác (Interroperabrlity) vả
+khái niệm chuyên mang (portability).
+
+Liên tác: các cài đặt của các hệ thống hoặc thành phần hệ thống từ các nhả sản
+xuất khác nhau có thê làm việc với nhau thông qua liên tác.
+
+Chuyên mang: nhờ chuyển mang mả một ứng dụng được phát triển cho hệ
+phân tán A có thể thực hiện không cần thay đồi gì trên một hệ phân tán B khác,
+với điều kiện được cải đã cùng giao diện như A
+
+d. Tính co giãn (Scalability)
+
+Một hệ phân tán được gọi là có tính co giãn nêu nó thích nghỉ với sự thay đổi
+quy mô của hệ thống. Thể hiện trên các khía cạnh sau:
+
+- Dễ bỗ sung người sử dụng và tài nguyên hệ thống.
+
+- Khi hệ thông thay đổi quy mô về mặt địa lý dẫn đến sự thay đổi về vị trí địa
+lý của người sử dụng vả các tải nguyên.
+
+- Hệ thống có thay đổi quy mồ về quản trỊ.
+
+Nếu hệ phân tán có tính co giãn thường ảnh hưởng đến hiệu năng của hệ thống
+(hiệu năng của hệ thông là hiệu quả năng lực hoạt động của đối tượng).
+
+Có ba giải pháp phố dụng đề giải quyết vẫn để co giãn của hệ phân tán:
+
+- Ấn giấu
+
+- Phân tán: phân nhỏ thành phần hệ thông vả phần bố chúng trên phạm vi của
+hệ thông (quản lý phần cấp). Ví dụ DNS xác định theo cách phân câp miễn lớn
+thành các miễn con. Với phương pháp nảy Sẽ giải quyết được vẫn đề khi thêm
+người dùng hay tải nguyên vảo hệ thống.
+
+- Nhân bản: nhân bản một thành phần nảo đó của hệ thống. Ví dụ tài nguyên dữ
+liệu đặt tại các vị trí khác nhau trong hệ thống.
+
+1.3 Các khái niệm phần cứng.
+
+a. Phần loại máy tính.
+
+Có hai loại máy tính:
+
+- Các loại máy tính có chia sẻ bộ nhớ (Shared memory): các loại máy đa xử lý
+(mulfiproccessor).
+
+- Các máy tính không chia sẻ bộ nhớ (Private memory): các hệ thống
+multicompuftors
+
+Trong mỗi loại lại chia tiếp theo mạng. kết nối bus - based chỉ có một đường kết
+nói và switch - base có nhiều đường kết nối từ máy này sang máy khác
+
+Hình 1: Hai cách tổ chức vi xử lý và bộ nhớ trong hệ máy tính phân tán.
+
+b. Hệ thuần nhất / hệ không thuần nhất.
+Hệ thông thuần nhât: mạng máy tính cùng sử dụng một công nghệ, các bộ xử lý
+là như nhau, truy cập đến củng một bộ nhớ giống nhau. Thường dùng trong hệ
+thông có tính toán song song.
+Hệ không thuần nhãt: những máy tính khác nhau kết nối với nhau.
+
+1.4 Các khái niệm phần mềm.
+
+a. DOS (distributed OS).
+
+Là hệ điều hành cho các hệ multiproccessor vả các hệ homogenous
+multlcomputer.
+
+Mục tiêu là ân giấu vả cung cấp các dịch vụ quản trỊ tải nguyên.
+
+Đặc điểm là các dịch vụ có thê được thực hiện bởi các lời triệu gọi tử xa.
+
+Hình 2. Cấu trúc chung của DOS
+
+b. NOS (Network OS).
+Là hệ điều hành cho các hệ thông heterogenous multicomputer (LAN, WAN).
+Mục tiêu của NOS là cung câp các dịch vụ từ xa.
+
+Hình 3 . Cấu trúc chung của NOS
+
+c. Middleware.
+Lả tâng phụ năm giữa tâng dịch vụ của NOS và tầng ứng dụng phân tán.
+
+Hình 4. Câu trúc chung của một hệ middleware
+
+1.5 Mô hình client - server
+
+a. Tổng quan về mô hình Client - server.
+
+Mô hình client - server trong một hệ phân tán được phần chia thành hai nhóm
+chính là nhóm các server vả nhóm các client. Nhóm các server chứa các dịch
+
+vụ đặc biệt. Nhóm các client là nhóm gửi yêu cầu đến server đề được sử dụng
+các dịch vụ đó trên server.
+
+Mô hình tương tác tổng quát giữa cÌienft vả server:
+
+Hinh 5 Mõ hình tương tác chung giữa một clienf và một server
+
+b Phân tầng các ứng dụng.
+
+Việc phần định rạch ròi chức năng của client vả server đến Ø81Ờ cũng rất khác
+biệt và không thuần nhất. Do đó người ta đưa ra ý tưởng là chia thành ba mức
+chức năng:
+
+User - interface level: bao gồm các chương trình cung cấp giao diện cho phép
+người sử dụng tương tác với chương trình ứng dụng.
+
+Processing level: làm nhiệm vụ xử lý các tác vụ của người dùng trên cơ sở dữ
+liệu
+Data level: gồm các chương trỉnh duy trì các dữ liệu mả các chương trỉnh ứng
+dụng xử lý.
+
+Chương 2: Truyền thông.
+
+(CommunIication)
+
+2.1 Các giao thức phần tầng (Layered protocols).
+
+Một trong những mô hình phân tầng thông dụng nhất hiện nay là mô hình OSI
+7 tầng. Mỗi tầng có các giao thức riêng cho nó.
+
+- Tầng ứng dụng.
+
+- Tầng trình diễn.
+
+- Tầng phiên.
+
+- Tầng vận chuyền.
+
+_ Tầng mạng.
+
+- Tầng liên kết dữ liệu.
+
+- Tầng vật ly:
+
+Một cải tiễn trong hệ phân tản là gộp tầng trình diễn và tầng phiên thành một
+tầng mới là tầng middle ware. Do đó ta cũng phải xây dựng các giao thức
+tương ứng cho tầng middleware này.
+
+Có 4 mồ hình dịch vụ middleware mả ta sẽ xét lần lượt sau đây:
+
+- Gọi thủ tục từ xa RPC (Remote Procedure Call).
+
+- Triệu gọi đối tượng từ xa (Remofte ObJect Invocation)
+
+- Middleware hướng thông điệp (Message - orlented Middleware)
+
+- Middleware hướng dòng (Stream - orIented Middleware)
+
+2.2 Gọi thủ tục từ xa (Remote procedure call - RPC).
+
+TT Tông quan về RPC.
+
+Khi một tiến trình trên máy À muốn thực hiện một thủ tục nào đó nằm trên một
+máy B khác thi nó sẽ thực hiện một lời gọi thủ tục từ xa tới máy B. Thủ tục đó
+sẽ được thực hiện ở máy B dựa trên các tham SỐ được truyền đến từ máy AÁ vả
+kết quả sẽ được truyên trở lại cho máy A tương ứng.
+
+Trong mồ hình client - server thì lời gọi thủ tục từ xa được thực hiện qua các
+bước sau:
+
+- Tiên trình muốn thực hiện thủ tục ở máy client sẽ gọi client stub.
+
+- Client stub sẽ tạo một bản tin vả có lời gọi đến hệ điều hành của client đó.
+
+- Hệ điều hành của máy client sẽ gửi bản tin đó tới hệ điều hành của máy
+SGTV€T.
+
+- Hệ điều hành của server sẽ gửi bản tin tới server stub.
+
+- Server stub lấy các thông tin của gói tin vả gọi server tương ứng.
+
+- Server thực hiện công việc được yêu cầu vả trả kết quả về cho server stub.
+
+- Server stub đóng gói kết quả đó vào bản tin rồi gọi hệ điều hành của server
+đó.
+
+- Hệ điều hành của máy server nảy sẽ gửi bản tin kết quả đó hệ điều hành của
+máy client.
+
+- Hệ điều hành của máy client sẽ gửi bản tin cho client stub.
+
+- Client stub sẽ mở gói tin kết quả và trả về cho client.
+
+Trong đó, client stub vả server stub ở máy client và server là thành phần nhằm
+giảm nhẹ công việc cho clHient và server, làm cho hệ thông hoạt động một cách
+trong suôt hơn.
+
+Hinh 6. RPC giữa một client vả server
+
+2.2.2 Xét chỉ tiết các thao tác RPC.
+
+Đóng gói các tham SỐ: VIỆC đóng gói các tham số đề chuân bị truyền đi do
+client stub thực hiện. C lient stub sẽ sắp xếp các tham số và đưa vào hàng đợi và
+quá trình nảy được gọi lả parameter marshaling. Các tham số được truyền đi
+giúp cho server hiểu được công việc mình cần thực hiện tương ứng là gì để xác
+định lời gọi đến thủ tục thích hợp.
+
+Truyền tham số: Việc truyền tham số từ client tới . Có hai cách truyền: truyền
+tham biến vả truyền tham trị.
+
+- Truyền tham trị: các tham số được truyền đi là các giá trỊ cụ thê. Các thủ tục
+được gọi đến sẽ coi các tham biến được truyên kiêu tham trị như lả các biến
+được khởi tạo cục bộ, có thê thay đổi giá trị nhưng lại không ảnh hưởng tới giá
+trị gốc trong lần gỌI Sau. Vấn đề đặt ra khi truyền tham trị là yêu cầu giữa các
+máy phải có sự đồng nhất về VIỆC biêu diễn dữ liệu vả các kiêu dữ liệu.
+
+_ Truyền tham biến: các tham số được truyền đi là con trỏ hay biến chứa địa chỉ
+của nơi chưa giả trị thực của chúng. Các thủ tục được gọi sẽ căn cứ vào địa chỉ
+này đề tham chiếu đến giá trị khi tính toán. Khi giá trị này bị thay đôi trong khi
+thực hiện thủ tục thi sẽ được thông bảo cho client và các lần ØọI sau sẽ dùng giá
+trị mới đó.
+
+2.3 Các mô hình RPC mở rộng.
+
+2.3.1 RPC dị bộ (Asynchronous RPC).
+
+Tư tưởng thực hiện là: client gửi tới server lời gọi thủ tục và chờ bản tin chấp
+nhận từ server. Phía server sẽ gửi bản tin chấp nhận về cho client thông báo đã
+nhận được yêu cầu vả bắt đầu thực hiện yêu cầu RPC đó. Lúc nảy client sẽ tếp
+tục thực hiện công việc của mình mả không chờ kết quả từ server như ở RPC
+truyền thống.
+
+Hình 7. RPC dị bộ.
+
+2.3.4.6. đồng bộ trễ (Deferred synchronuos RPC):
+
+Thực hiện hai lời gọi, một tử client và một tử server.
+
+Client gửi tới server lời gọi thủ tục và chờ bản tin chấp nhận từ server. Phía
+server sẽ gửi bản tin chấp nhận về cho client thông báo đã nhận được yêu cầu
+và bắt đầu thực hiện yêu cầu RPC đó. Lúc nảy client sẽ tếp tục thực hiện công
+việc của mỉnh. Khi thực hiện thủ tục xong, server sẽ thực hiện lời gọi tới clientf
+báo nhận lẫy kết quả. Client thực hiện ngắt, nhận kết quả vả gửi lại cho server
+bản tin thông báo đã nhận kết quả thành công.
+
+Hình §. RPC đồng bộ trễ.
+
+2.3.3 RPC đơn tuyến (one- way RPC).
+Sau khi thực hiện lời gọi thủ tục từ xa tới server, client không chờ đợi thông
+báo nhận yêu câu thành công từ server mà tiếp tục thực hiện ngay các công
+việc khác của mình. Đó là RPC đơn tuyển.
+
+2.4 Triệu gọi đỗi tượng từ xa (Remote obJecft 1nvocation).
+
+2.4.1 Đối tượng phân tán (Distributed obJect ).
+
+Một đối tượng phân tán gồm các thành phần sau:
+
+- State: là các dữ liệu đã được đóng gói.
+
+- Method: là các thao tác có thê thực hiện trên dữ liệu.
+
+- Interface: là nơi để giao. tiếp với các phương thức của đối tượng. Nói cách
+khác , các phương thức sản sảng thông qua Interface.
+
+Một đối tượng có thê thực thi nhiều interface và cũng có thê có nhiều đối tượng
+cùng thực thi một Interface giống nhau.
+
+Sự độc lập giữa các interface vả các đối tượng thực thi interface cho phép ta có
+thê đặt một interface vào một máy nào đó trong khi chính bản thân đối tượng
+có thể cư trú ở máy khác.
+
+Hình 9. Đối tượng phân tán.
+2.4.2 Các bước thực hiện triệu gọi đối tượng từ xa.
+Hình 10. Triệu gọi đối tượng từ xa.
+
+Khi cần triệu gọi các phương thức từ xa, client sẽ gửi yêu cầu đến proxy - một
+thê hiện của interface.
+
+Proxy sẽ marshal (sắp xếp và đưa vào hàng theo thứ tự) các phương thức được
+yêu câu vảo một bản tin rỗi gửi cho hệ điều hành của máy client.
+
+Hệ điều hành của client sẽ gưi bản tin yêu cầu đó đến hệ điều hành của server.
+Hệ điều hành server nhận bản tin vả chuyên cho skeleton (giống server stub của
+KEC].
+
+Skeleton sẽ unmarshal bản tin nhận được đẻ gửi đến interface của đối tượng có
+phương thức tương ứng.
+
+Đối tượng thực thị phương thức rồi trả kết quả về cho skeleton.
+
+Skeleton marshal kêt quả nhận được rồi gửi trả về cho hệ điều hành của client.
+Hệ điều hành của client nhận bản tin kết quả rồi chuyên tới cho proxy.
+
+Proxy unmarshal bản tin đó rồi chuyên kết quả về cho client.
+
+Chú ý là cả client va server đều sử dụng interface giống nhau.
+
+Một số các đối tượng
+
+Compile - time object: là các đối tượng trong các ngôn ngữ lập trình hướng đối
+tượng. Nó được định nghĩa như là một mẫu của class.
+
+Runime obJect
+
+Persistent Oblect - đối tượng kiên tri: là đối tượng vẫn tồn tại ngay cả khi nó
+không tồn tại trong không gian địa chỉ của tiền trình nảo trên S€TVEI.
+
+Transient object - đối tượng tức thời: là đối tượng chỉ tôn tại khi server gọi đến
+nó, sau khi dùng xong nó sẽ được giải phóng.
+Triệu gọi phương thức từ xa (EMI - remote method Invocation)
+
+Sau khi đã triệu gọi một đối tượng từ xa, client có thê triệu gọi tử xa phương
+thức của đối tượng đó.
+
+Có hai phương pháp triệu gọi phương thức từ xa lả: triệu gọi phương thức từ xa
+động vả triệu gọi phương thức từ xa tĩnh.
+
+Triệu gọi phương thức từ xa động: khi cần gọi đến một phương thức mới xác
+định Interface đang dùng trong lời triệu gọI từ xa đó. Vì thế khi interface thay
+đổi, các chương trinh ứng dụng không cần phải biên dịch lại.
+
+Triệu gọi phương thức từ xa tính: các interface được xác định trước. Các
+chương trình ứng dụng không thích ứng được khi interface hiện hành thay đối.
+
+Nếu interface hiện tại có sự thay đổi thì các chương trình ứng dụng phải được
+biên dịch lại mới có thê hiểu
+
+ME on) Truyền thông hướng thông điệp (Message - orlented communication).
+2.5.1 Các loại truyền thông cơ bản
+
+Truyện thông kiên trì (Persistent communication): Thư điện tử là một ví dụ
+minh họa rõ nét cho khái niệm truyền thông kiên trì.Khi một trạm muốn gửi
+bản tin đi trên mạng, nó sẽ gửi bản tin đó đến interface của máy mình. Qua bộ
+nhớ đệm, bản tin đó được truyền đi trong mạng cục bộ đề đến mail server cụ
+bộ. Mail server này tạm thời lưu trừ bản tin đó vào bộ nhớ đệm của mình, xác
+định địa chỉ trạm đích, rồi gửi tới server cục bộ của trạm đích tương ứng (có
+thê đi qua nhiêu mail server trung gian khác). Tới mail server cuối cùng, bản
+tin lúc nảy sẽ được lưu lại trước khi phát cho trạm đích tương ứng.
+
+Truyền thông nhất thời (Transient communication): bản tin gửi đi chỉ được lưu
+lại trong phiên trao đổi đó. Khi phiên trao đổi đã hoản thành hoặc khi kết nối bị
+hủy bỏ thì các bản tin đó cũng bị hủy bỏ trên các server. Do đó, vì một ly do
+nảo đó mả một server trung gian không thê chuyển tiếp bản tin đi được thì bản
+tin nảy sẽ bị hủy bỏ.
+
+Truyền thông đồng bộ (Synchronous communication): khi trạm gửi gửi đi một
+bản tin thì nó sẽ ở trạng thái khóa (blocked) cho đến khi nhận được thông bảo
+bản tin đó đã đến đích thành công.
+
+Truyền thông dị bộ (Asynchronous communication): khi trạm gửi gửi đi bản
+tin, nó sẽ tiếp tục thực hiện công việc của mình. Điêu nảy cũng có nghĩa là bản
+tin đó được lưu lại trên bộ nhớ đệm của trạm gửi hoặc của server cục bộ.
+
+2.5.2 Một số loại truyền thông hỗ hợp.
+
+Truyền thông dị bộ, kiến trì: bản tin được lưu trừ lầu dài hoặc là ở bộ nhớ đệm
+của trạm gửi hoặc là trên server truyền thông đầu tiên mà bản tin đó tới. Ví dụ
+hệ thống thư điện tử.
+
+Truyền thông đồng bộ. kiên tri: bản tin được lưu trữ lầu dải ở trạm nhận, trạm
+gửi sẽ ở trạng thái blocked cho đến khi bản tin được lưu trữ ở bộ nhớ đệm trạm
+nhận.
+
+Truyền thông dị bộ, nhất thời: sau khi lưu trữ bản tin cần gửi ra bộ nhớ đệm
+của máy mình, trạm gửi sẽ tiếp tục thực hiện công việc của mình. Cùng lúc,
+bản tin sẽ được truyền tới trạm nhận. Khi bản tin đến được trạm nhận mà trạm
+nhận đó lại không làm việc, khi đó quá trình truyền thông bị hủy bỏ.
+Truyền thông đồng bộ. nhất thời: bản tin không được lưu trữ lâu dài. Khi gửi đi
+một bản tin, trạm gửi sẽ chờ bản tin bảo đã nhận thành công của trạm nhận gửi
+về mới thực hiện tiêp công việc của mình.
+
+Hình 11. Một số dạng truyền thông.
+
+2.6 Truyền thông hướng dòng (stream- orIented communiIcatfion).
+
+2.6.1 Một số khái niệm cơ bản.
+
+Medium (số nhiều là media) : chi các phương tiện dùng để truyện thông tin như
+các thiết bị lưu trữ, đường truyền, các phương tiện hiển thị...
+
+Continuous media: quan hệ thời gian giữa các mục là yếu tô cơ bản đề thông
+dịch đúng ngữ nghĩa thực sự của dữ liệu.
+
+Discrete media: quan hệ thời gian không còn là yếu tô cơ bản để thông dịch
+đúng dữ liệu.
+
+Data stream: là một chuỗi các đơn vị dữ liệu. Với data stream thì thời gian là
+yêu tô quyết định. Đề kiêm soát thời gian người ta đưa ra ba phương thức
+truyền sau:
+
+Truyền dị bộ (asynchronous transmission mode): các mục dữ liệu truyền tuần
+tự vả không có ràng buộc thời gian đối với việc truyền.
+
+Truyền đồng bộ (synchronous transmission mode): quy định trước độ trễ tối đa
+cho mỗi đơn vị dữ liệu trong data stream.
+
+Truyền đăng thời (Isochronous transmission mode): quy định độ trễ lớn nhất và
+nhỏ nhất cho mỗi đơn vị dữ liệu trong data stream. Cách truyện nảy đóng một
+vai trò quan trọng trong việc trình diễn audio vả video.
+
+Dòng đơn (simple stream) là dòng chỉ gỏm một chuỗi đơn vị dữ liệu.
+
+Đông phức (complex stream): bao gồm nhiều chuỗi đơn vị dữ liệu khác nhau.
+Mỗi chuỗi nảy được gọi là một dòng con (sub stream).
+
+2.6.2 QoS - chất lượng dịch vụ.
+
+Chất lượng dịch vụ Qo5 liên quan đên các vẫn đề sau:
+
+Băng thông yêu cầu, tốc độ truyền, trễ..
+
+LoSS S€nSItIVIty: kết hợp cùng với Ìoss intervdÏ cho phép ta xác định được tốc
+độ mât mát thông tin có thê chấp nhận được.
+
+Burst loss sensifivify: cho phép xác định bao nhiều đơn vị dữ liệu liên tiếp có
+thê bị mắt.
+
+Minimum delay noticed: xác định giới hạn thời gian trễ trên đường truyền cho
+phép đề bên nhận không nhận biết được là có trễ.
+
+Maximum delay variation: xác định độ trễ (jitter) rung lớn nhất cho phép.
+Quality of guarantee: chỉ số lượng các dịch vụ yêu cầu cần phải có.
+
+2.6.3 Đồng bộ các dòng.
+
+Có hai loại đồng bộ:
+
+Đồng bộ đơn giản: thực hiện đồng bộ giữa dòng trễ và dòng liên tục. Ví dụ
+trong việc trình diễn slide có kèm âm thanh. Dòng hình ảnh slide là dòng trễ
+còn dòng âm thanh là dòng liên tục, phải đồng bộ hai dòng nảy đề thu được kết
+quả trình diễn như ý muôn.
+Đồng bộ phức tap: là việc đồng bộ giữa các dòng dữ liệu liên tục. Ví dụ trong
+việc xem phim trực tuyên, cả dòng âm thanh và dòng hình ảnh đều là các dòng
+liên tục cần phải được đồng bộ.
+
+Các kĩ thuật đồng bộ: có hai kĩ thuật đồng bộ
+
+Kĩ thuật đơn giản: dựa trên việc đồng bộ các thao tác đọc ghi trên các dòng dữ
+liệu sao cho phủ hợp với các yêu cầu thời gian cho trước vả các rảng buộc về
+đồng bộ.
+
+Hình 12. Đồng bộ đơn giản.
+
+Kĩ thuật phức tạp: đồng bộ trên mỗi trường mạng dựa trên cả việc đồng bộ giữa
+bên nhận vả bên gửi.
+
+Hình 13. Đồng bộ phức tạp
+
+Chương 3 : Tiến trình
+
+(Processes)
+
+3.1 Luồng (Thread).
+
+Tiền trình (Process) là chương trình đang được thực hiện, nó coi tính trong suốt
+là quan trọng.
+
+Luông (Thread): là một hay một phần chương trình đang thực hiện, nó coi hiệu
+năng lả quan trọng.
+
+Lời gọi hệ thống (System call): là tập lệnh mở rộng do hệ điều hành cung cấp
+xác định giao diện giữa hệ điêu hành và các chương trình người sử dụng.
+Blocking 5ystem call: là lời gọi hệ thông mả sau khi được gọi bởi tiên trình
+người sử dụng thi tiền trình nảy bị dừng lại cho đến khi thực hiện xong lời gọi
+hệ thống.
+
+Non - Blocking System call: sau khi gọi, điều khiên được trả lại cho tiễn trình
+gọi vả tiên trỉnh này tiếp tục thực hiện song song với lời gọi hệ thống.
+
+Đa luồng (Multi thread): áp dụng cho mỗ hình client/server được gọi là
+multithread server vả multithread client. Với mỗ hình nảy giúp đơn giản hóa
+khi lập trình cho server đồng thời cũng tăng khả năng xử lý song song, làm
+tăng hiệu năng của hệ thông.
+
+Có ba phương pháp tiếp cận đê xây dựng một server:
+
+Đơn luông (single - threaded server) : non - parallelism, blocking system call.
+Đa luỗng (multi - threaded server) : parallelism, blocking system call.
+
+Máy trạng thải hữu hạn (Finite State Machine): parallelism, non - blocking
+system call.
+
+3.2 Di trú mã.
+Lý do cần phải di trú mã: để tăng hiệu năng và độ linh hoạt của hệ thống do
+
+việc di chuyên của các tiền trình đang thực hiện là rất khó khăn.
+Một tiễn trình bao gồm :
+
+Phần mã (Code Segment): chứa tập các lệnh của tiền trinh đang thực hiện.
+Phần tài nguyền (Resource Segmenf): chứa các tham chiêu đến tất cả các tài
+nguyên bên ngoải mà tiến trình đang cần
+
+Phần thực thi (Execution segment): chứa các trạng thái thực thị hiện hành của
+tiễn trình.
+
+Các mồ hình di trú mã:
+
+Hinh l4 Các mồ hình di trú mã.
+
+Weak mobility: chỉ truyền phần mã vả một số các dữ liệu khởi động của tiễn
+trinh. Đặc tính của mô hình nảy là một chương trình được truyền đi luôn được
+bát đầu từ trạng thái khởi động, chỉ yêu cầu máy đích có thẻ thực thi yêu cầu
+(code) đó
+
+Strong mobillty: truyền cả phần mã vả phần thực thi. Đặc điêm của mô hình
+nảy là một tiên trỉnh đang chạy có thê được dừng lại rồi chuyển đến một máy
+khác và tiếp tục thực hiện tiếp tiền trình đó —>khó thực thi hơn.
+
+Sender Iniftiated migration (di trú được khởi tạo từ phía gửn) : Di trú được khởi
+động tử máy mả phần code của tiễn trình được lưu trữ hoặc đang thực hiện. Di
+trủ nảy hoàn thành khi upload chương trình.
+
+Recerver Initiated migration (di trú được khởi tạo từ phía nhận) : Di trủ mã ban
+đầu từ máy tính.
+
+Di trú được khởi tạo từ phía nhận thực thi đơn giản hơn di trú được khởi tạo tử
+phía gửi.
+
+3.3 Tác tử mềm.
+
+3.3.1 Định nghĩa và phân loại:
+
+Định nghĩa: Tác tử là một tiền trình tự trị có khả năng phản ứng, trao đối. cộng
+tác với các tác tử khác trong mỗi trường của nó.
+
+Phân loại theo khái niệm di trủ hóa:
+
+Tác tử di động (mobie agent): là một tác tử đơn giản có khả năng di chuyên
+giữa các máy khác nhau. Trong di trú mã, các tác tử di động thường yêu câu hỗ
+trợ cho mô hỉnh di động mạnh mặc dù là không cần thiết. Yêu cầu nảy đến từ
+thực tế là các tác tử lả tự trị và có ảnh hưởng lẫn nhau vả với môi trường của
+chúng. Sự di chuyên một tác tử đên máy khác khó có thê được thực hiện nều
+không xét đến trạng thái thực thị của nó. Tính dị động là đặc tính chung của các
+tác tử.
+
+Tác tử thông minh (Intelligent agent): là tác từ dùng đề quản lý thông tin tử
+nhiều nguôn khác nhau. Việc quản lý thông tin bao gồm việc sắp xếp, lọc, thu
+thập... Vì các tác tử này thao tác trên thông tin từ những nguồn vật lý khác
+nhau nên chúng đóng vai trỏ rất quan trọng.
+
+3.3.2 Công nghệ tác tử.
+Hinh 15. Mô hỉnh agent flatform của FIPA
+
+ACL (Agent Communication Language): Truyền thông giữa các tiền trình tuân
+thủ theo giao thức truyện thông mức ứng dụng ACL. ACL message bao gỗm
+phần header vả nội dung. Phần header chứa trường để xác định mục đích của
+thông điệp, cùng với trường để xác định người gửi và người nhận. Cũng như
+các giao thức truyền thông, phần nội dung được tách riêng. ACL không qui
+định khuôn dạng hay ngôn ngữ thê hiện nội dung thông điệp.
+
+ACC: Một thành phân quan trọng trong nên tác tử lả kênh truyền thông tác tử -
+ACC. Trong hầu hết các mô hình cho hệ thông đa tác tử, các tác tử truyền
+thông bằng cách trao đổi thông điệp. Mô hình FIPA cũng để cho một ACC
+quản lý việc truyền thông giữa các agent flatform khác nhau. Cụ thê, ACC là
+nguyên nhân cho việc truyền thông điểm tới điểm với các nền khác một cách
+xác thực.
+
+Chương 4: Định danh.
+
+(Naming)
+
+4.1 Các thực thể định danh (Naming Entitles).
+
+4.1.1 Tên, định danh vả địa chỉ.
+
+Tên (name): là xâu các bịt hoặc kí tự dùng đề tham chiều đến một thực thê
+trong hệ phần tán.
+
+Địa chỉ (address): khi truy cập đến thực thê ta sử dụng điểm truy cập (access
+point). Các điểm truy cập này cũng phải được đặt tên và tên đó chính là địa chỉ
+của nó. Như vậy địa chỉ của thực thê chính là tên của điêm truy cập thực thê
+tương ứng.
+
+Định danh (Identifiers): đầy cũng là một kiêu tên đặc biệt. Việc định danh một
+tên phải thỏa mãn ba tính chất sau:
+
+- Mỗi thực thê chỉ được tham chiếu bởi duy nhất một định danh ID
+
+- Mỗi ID tham chiêu tới một thực thê.
+
+- ID đó không được gản cho một thực thê khác.
+
+Không gian tên (Name SpAC€): dùng đề biêu diễn tất cả các tên. Nếu xét về mặt
+hỉnh học thì đây là một đỏ thị có hướng, gồm các nút và các cung, gọi là đỗ thị
+tên (naming graph). Đồ thị có câu trúc: Mỗi nút lá miêu tả một một thực thẻ.
+Mỗi nút directory gắn với nhiều nút khác; lưu trữ trong bảng directory, bảng
+nảy là tập các cặp (label,indetifIer).
+
+Tên thân thiện (Human-friendly name): là các tên được đặt một cách dễ hiểu,
+thần thuộc với con người.
+
+4.1.2 Độ phân giải tên.
+
+Không gian tên đưa ra kĩ thuật lưu trữ vả tìm kiểm các tên trên nó một cách dễ
+đảng. Một trong những phương pháp hay dùng lả sử dụng đường dẫn tên (path
+name). Quá trình tìm kiểm tên trong không gian tên được gọi lả phân giải tên
+(name resolution). Quả trinh phần giải tên trả về định danh một nút.
+
+Closure machanism: là kĩ thuật cho ta biết quả trinh tìm kiểm tên được bắt đầu
+như thế nảo vả bắt đầu ở đâu.
+
+Linking: kĩ thuật này sử dụng bí danh (alias) - tên giống với tên của thực thê.
+Với kĩ thuật nảy cho phép nhiều đường dẫn cùng tham chiêu đến cùng một nút
+trên đỗ thị tên. Một cách tiếp cận khác là dùng một nút lá không phải để lưu trữ
+địa chỉ hay trạng thải của thực thể mà đề lưu trữ đường dẫn tuyệt đối tới thực
+thê đó.
+
+Mounting: lả kĩ thuật được thực hiện khi tìm kiếm trên hai không gian tên. Một
+nút thư mục được gọi là một mount poInf (điểm gắn kết) lưu giữ 1d (hoặc các
+thông tin cần thiết cho việc xác định vả truy nhập) một nút thư mục bên phía
+không gian tên cần gắn kết được gọi là mounting point.
+
+Hinh 1ó. Mouting một không gian tên tử xa nhờ một giao thức truy cập
+
+Thông thường, nếu 2 không gian tên NS1, NS2 - đê gắn kết một thực thê bên
+ngoài trong hệ phân tán, chúng ta cần tối thiêu những thông tin sau:
+
+- lên của giao thức truy nhập ( được xác định để thực hiện giao thức truyền
+thông)
+
+- Tên của server (xá định địa chỉ server)
+
+- lên của mounting point (xác định 1d của nút trong không gian tên bên ngoài)
+
+4.1.3 Thực hiện một không gian tên.
+
+Phân phối không gian tên
+
+Trong hệ phân tán, việc quản lý tên được thực hiện bằng cách phân thành các
+mức:
+
+Mức Global: Chứa những nút thư mục ở mức cao ( gốc và con của nó). Trong
+lớp này các nút thư mục Ít thay đối.Khả năng sẵn sảng ở lớp Global được yêu
+cầu cao hơn so với các lớp còn lại. Nếu name server của lớp nảy bị lỗi thì việc
+phân giải tên không thê thực hiện.
+
+Mức Administrational: Chứa những nút thư mục ở mức trung gian, nó có thê
+được nhóm thảnh các nhóm, và mỗi nhóm có thê được chia cho những khu vực
+quản trị khác nhau. Các nút ở trong nhóm này cũng ít khi thay đổi. Khả năng
+sản sảng của name server trong lớp administrational là rất quan trọng đối với
+các client do name server quản lí. Vì nều server này lỗi thì có rất nhiều các tài
+nguyên không thê truy cập
+
+Mức Managerial: Chứa những nút thư mục ở mức thấp. Các nút trong mức nảy
+thay đối khá thường xuyên. Ví dụ như các host trong một mạng LAN. Yêu câu
+đối tính sẵn sảng của name server của lớp managerial ít khắt khe hơn so với 2
+lớp trên. Song về hiệu năng thỉ yêu cầu đối với lớp nảy cao hơn do phải thường
+xuyên cập nhật các thay đi.
+Hình17 . Phân phối không gian tên
+
+Thực hiện phần giải tên
+
+Cách 1: phân giải tên tương tác (interactive name sesolution),việc phân giải tên
+thực hiện bằng cách truyền vả nhận qua lại giữa client và các name server ở các
+mức khác nhau. Theo cách này thì các server không trao đối trực tiếp với nhau,
+
+mỗi server chỉ phân giải nhãn tương ứng với lớp đê xác định địa chỉ của server
+tiếp theo, kêt quả trả lại cho clienf là địa chỉ của name server tiếp theo, vả việc
+liên kêt với server tiếp theo là do client đảm nhiệm.
+
+Hinh 18. Phần giải tên tương tác
+
+Cách 2: phân giải tên đệ quy (recursive name resolution), theo cách này thì mỗi
+name Server sẽ gửi kết quả đến name server tiếp theo mà nó tim thấy. Và cứ
+như vậy cho đến khi hoản thành phân giải toàn bộ đường dẫn.
+
+4.2 Định vị các thực thẻ di động.
+
+4.2.1 Tên và việc định vị các thực thê.
+
+Mỗi thực thê đều có tên và địa chỉ tương ứng, việc ánh xạ từ tên đến địa chỉ của
+thực thể được thực hiện theo hai phương pháp: theo mô hình một lớp và theo
+mô hỉnh hai lớp.
+
+Theo mô hình một lớp: chỉ có một mức ánh xạ giữa tên vả thực thể. Mỗi lần
+thực thê thay đổi vị trí, ánh xạ cần phải được thay đổi theo
+
+Theo mô hình hai lớp: phân biệt tên vả địa chỉ nhờ Entity ID. Gồm hai quá
+trình: quá trình tìm Entity ID tương ứng từ tên của thực thê được thực hiện
+bằng dịch vụ tên (naming service) vả quả trình xác định vị trí của thực thê từ
+ID được thực hiện bởi dịch vụ định vị (Location servIce).
+
+Hinh 20 (a) .Mô hinh một lớp (b). Mô hình hai lớp.
+
+4.2.2 Các giải pháp định vị thực thê.
+
+Broadcasting vả multicasting: gửi ID cần tỉm tới tất cả các máy. Máy nào có
+thực thê đó thì gửi lại một thông báo chứa địa chỉ của aCC€SS point. Với phương
+pháp nảy, yêu cầu tất cả các tiên trình đều lắng nghe yêu cầu gửi đến.
+
+Dùng con trỏ (forwarding pointer): với một thực thể đi động rời khỏi vị trí A
+của nó đến vị trí B thi nó sẽ đê lại một tham chiều tới vị trí mới của nó. Nhờ đó,
+khi định vị được thực thê, client có thê xác định ngay được địa chỉ hiện tại của
+thực thê này nhờ vết địa chỉ đó.
+
+Home-based approaches: cấp phát cho mỗi thực thể một vị trí gốc (home)
+
+Với phương pháp nảy sẽ tạo ra một home location để lưu giữ địa chỉ hiện tại
+của các thực thể (thường lả nơi thực thể được tạo ra ).
+
+Địa chỉ của home được đăng kí tại naming servIce.
+
+Home đăng kí địa chỉ ngoải của các thực thê
+
+Client luôn đến home trước tiên, vả sau đó tiếp tục với các vị trí bên ngoải.
+
+Hinh .
+
+Hierarchical approaches: xây đựng một cây tìm kiếm phân cấp vả thực hiện
+phân miền ở các mức khác nhau. Mỗi domain hình dung như một nút thư mục
+riêng biệt dir(d). Nút gốc biết tất cả các thực thê. Mỗi thực thể trong một
+domain D tương ứng với một locafion record trong nút thư mục dir(D), nó là
+địa chỉ hiện tại của thực thể hoặc một con trỏ.
+Hinh 22 .Hierarchical approaches
+
+Địa chỉ của một thực thê được lưu trong một nút lá, hoặc một nút trung gian.
+Nút trung gian chứa một con trỏ đến một nút con nều vả chỉ nếu cây con năm
+tại nút con lưu trữ một địa chỉ của thực thẻ. Một thực thể có thể có nhiều địa
+chỉ (ví dụ trong trường hợp tạo bản sao).
+
+Hình 23. Cấu trúc nút
+Nguyên lý cơ bản: Bắt đầu tìm kiểm ở các nút lá cục bộ. Nếu nút đó biết thực
+
+thê, tiếp theo sẽ đi xuống phía dưới theo con trỏ, ngược lại đi lên trên. Tìm
+kiếm lên mức cao nhất là root
+
+Hình 24 .Nguyên lý tìm kiếm
+
+4.3 Xóa bỏ các thực thê không còn được tham chiêu (Unreferenced Entities).
+4.3.1 Đêm các tham chiều (Reference Counting).
+
+Mỗi lần client tạo(xóa) một tham chiều đến một đối tượng O, một bộ đếm tham
+chiêu sẽ tăng thêm (giảm đi).
+
+4.3.2 Lên danh sách các tham chiều (Reference Listing).
+
+Skeleton duy trì một danh sách tất cả các proxy trỏ đến nó.
+
+Ở đây đưa ra khái niệm Idempotent operation là một thao tác nó có thể lặp đi
+lặp lại nhiều lần mà không ảnh hưởng đến kết quả ( ví dụ 1#]=1).
+
+Thông điệp đê thêm/xóa một proxy của danh sách cũng gần giỗng như
+tăng/giảm bộ đếm tham chiếu.
+
+Các thực thể chuyên tham chiếu cho các thực thê khác nhưng không thê lẫy
+được từ root.
+
+Tập hợp loại bỏ dựa trên cơ sở truy nguyên: kiêm tra những phương thức có thê
+lấy được tử root vả remove
+
+Chương 5 : Đông bộ hóa
+(Synchronization)
+
+5.1 Đồng bộ hóa đồng hỗ (Clock Synchronization).
+
+Trong hệ phân tán,môi máy tính là một đồng hồ nên việc đông bộ các đồng hỗ
+nảy là rất cần thiết và rất khó khăn.
+
+5.1.1 Đông hỗ vật lý (Physical Clock).
+
+Chúng ta có nhiêu cách đề xác định thời gian.Phố biến nhất là các hệ đếm thời
+gian theo thiên văn vả ở đây là mặt trời.Có 23h một ngày và 3600 giây.Một
+giầy mặt trời được tính là 1/5600 của một ngày mặt trời.Một trong những mồ
+hình đê tính thời gian áp dụng phương pháp trên là Internatinal Atomic Time
+viết tắt là TAI. Tuy nhiên, TÀI lại có một vân để là cứ 86400TAIs sẽ có 3ms
+chậm hơn sơ với đồng hồ mặt trời.
+
+Đề thông nhất thời gian vật l người ta đã đưa ra khái niệm thời gian phối hợp
+toàn cầu UCT (Universal Coordinate Time). Viện chuẩn quốc gia Mỹ đã lập ra
+trạm phát radio sóng ngắn W W V để gửi UTC khi cần hoặc định kì.
+
+3.1.2 Các giải thuật đồng bộ hóa vật lý (Clock synchronizatlon algorithm).
+Nếu tất cả các máy tính đều có WWV Receiver thì việc đồng bộ chúng là dễ
+đảng vì tất cả đều củng đồng bộ với giờ chuẩn quốc tế UTC. Fuy nhiên khi
+không có WWV thì việc đồng bộ được thực hiện bằng các giải thuật đông bộ
+sau.
+
+a. Cải thuật Cristian
+
+Cả sử trong hệ phần tân có một máy có WWYV (gọi là Time server ) và chúng
+ta SẼ tiên hành đồng bộ các máy khác với máy này. [rong khoảng thời gian ð/2p
+môi máy sẽ gửi một thông điệp đến máy chủ hỏi thời gian hiện tại. Máy chủ
+nhanh sẽ phản hồi bằng một thông điệp mang giá trị thời gian C(utc).Bên gửi
+nhận được phản hỏi nó sẽ thiết lập lại clock thảnh C(uet).
+
+Hinh 25. Xác định thời gian trong time server
+
+Đánh giá: giải thuật này có 2 vẫn đề :
+
+- Một là nếu clock bên gửi chạy nhanh thì lúc nảy C(uct) sẽ nhỏ hơn thời gian
+hiên tại C của bên gửi..Có thê giải quyết bằng cách thay đổi nhịp ngắt lại nhanh
+hơn hoặc chậm hơn cho đến lúc khớp nhau.
+
+- Hai là sự chênh lệch từ lúc C(uct) được gửi cho đến lúc nhận được có thể gầy
+lỗi.Giải quyết bằng cách ghi nhận khoản thời gian giữa lúc gửi vả nhận
+b. Giải thuật Berkeley.
+
+Tư tưởng của giải thuật:
+
+Server sẽ chủ động cho các máy khác biết thời gian chuẩn của mình CUTC sau
+đó sẽ yêu cầu thông tin về thời gian của các client.
+
+Client sẽ trả lời khoảng thời gian chênh lệch giữa nó và server.
+
+Server sẽ tính khoảng thời gian mà các clienf so với thời gian chuẩn của server
+lúc đó và gửi cho các máy khách cách điều chỉnh thời gian cho phủ hợp.
+
+Hình 26 . Đồng bộ theo giải thuật Berkeley
+
+c. Cải thuật trung bình
+
+Giải thuật này thực hiện chia thời gian thành những khoảng đồng bộ cố định.
+Khoảng thời gian I sẽ bắt đầu từ thời điểm (To + ¡.R) và chạy đến khi To+
+(r1)R với To là thời điểm xác định trước vả R là một biến hệ thông.
+
+Vào thời điêm bắt đầu của mỗi lần đồng bộ tất cả các máy của mạng sẽ
+broadcast thời gian của minh .
+
+Sau khi broadcast nó sẽ bắt đầu thu thập thời gian mà các máy khác gửi đến
+trong khoảng thời gian S. Sau đó bỏ đi giá trị lớn nhất và nhỏ nhất rồi tính
+trung binh của các giả trị thời gian còn lại.
+
+T2 Đồng hồ logic (Logical Clock)
+
+Trong nhiều trường hợp, giữa các tiên trình không nhất thiết phải phủ hợp theo
+thời gian thực tế mà chỉ cần khớp với nhau về thời gian. Do đó người ta đưa ra
+khái niệm đồng hỗ
+
+logic.
+
+3.2.1 Nhãn thời gian Lamport (Lamport timestamps).
+Lamport đã đưa ra mô hình đông hồ logic đầu tiên cùng với khải niệm nhãn
+thời gian.
+
+\a. Xét định nghĩa mỗi quan hệ "xảy ra trước” (
+
+B:A xảy ra trước B thì tất cả các tiên trỉnh trong hệ phân tán thỏa thuận sự
+kiện A xảy ra trước rồi đến sự kiện B.\ Khi có A
+
+B là đúng.\ A và B là hai sự kiện của cùng một tiễn trình. Nếu A xảy ra trước B
+thì A
+
+Nếu A là sự kiện bản tin được gửi bởi một tiến trình nào đó, còn B (là sự kiện
+bản tin đó được nhận bởi một tiễn trình khác thì quan hệ AÀ B là đúng.
+
+C.\ C thì A( B., B(Quan hệ xảy ra trước có tính bắc cầu: A
+
+b. Tem thời gian (Time Stamps)
+
+Đề đo thời gian tương ứng với 4 sự kiện x thì ta gán một giá trị C{(x) cho sự
+kiện đó vả thỏa mãn các điều kiện sau:
+
+B trong củng một tiền trình thì C(A)|Nếu A<€(B).
+
+Nếu A và B biêu diễn tương ứng việc gửi và nhận một thông điệp thi ta có
+C(A)< C(B)
+
+Với mọi sự kiện phần biệt (không có liên quan) thị C(A)<=C(B)
+5.2.2 Vector thời gian (Vector Timestamps)
+
+Cải thuật vector timestamp đưa ra một vetor timestamp VT(a) gản cho sự kiện
+a có thuộc tính là nêu Vtt(a) < VI(b) thi sự kiện là nguyên nhân của b.
+
+Trong vector thời gian mỗi tiền trình Pi lưu giữ một Vi với giá trị N (các tiễn
+trinh khác nhau thi N khác nhau)
+
+- VIH] là số các sự kiện đã xảy ra tại PI
+
+- Nếu Vi[j] = k nghĩa là Pi biết đã có k sự kiện đã xây ra tại Pj
+
+Yêu câu: mỗi khi có sự kiện mới xảy ra ở tiên trình Pi thì phải tăng VI[I] và
+phải đảm bảo vector này được gửi cùng thông điệp suốt trong quá trình.
+
+Nhờ đó bên nhận sẽ biết được đã có bao nhiều sự kiện xảy ra tại PI .Quan trọng
+hơn phía nhận sẽ báo cho biết là đã có bao nhiều sự kiện ở các tiến trình khác
+đã xảy ra trước khi PI gửi thông điệp m.Nói cách khác timestamp VT của n nói
+cho bên nhận biết bao nhiêu sự kiện đã xảy ra trong các tiền trình khác trước m.
+
+Luật cập nhật vector
+
+- Thiết lập Vi[j] =0 với mọi j.i
+
+- Sự kiện xảy ra ở PI là nguyên nhần tăng VI[1]
+
+- Pi gắn một timestamp t=V[ï] vào mọi thông điệp gửi đi
+- Khi PI nhân được một thông điệp có f nó sẽ thiết lập
+VII|EMax(VH|J] ,t[[]) và tăng VIỈI]
+
+5.3 Trạng thái tổng thê (Global sate).
+
+Việc xác định trạng thái tổng thê của hệ thống rất có ích. Một trong những
+phương pháp được đưa ra là Chụp Nhanh Phân Tán (Distributed Snapshort)
+cùng khái niệm lát cắt (cut).
+
+Hình 28 .(a) Lát cắt nhất quá. (b) Lát cắt không nhất quán
+
+Một lát cắt nhất quán được biêu diễn là đường chấm gạch trong hình a. Lát cắt
+mô tả sự kiện cuôi cùng mà sự kiện nảy được ghi lại cho mỗi tiên trình. Bằng
+cách này nó có thê kiêm tra lại rằng tất cả các thông điệp nhận đều tương Ứng
+với các thông điệp gửi được ghi lại trên đường cắt. Ngược lại là lát cắt không
+nhất quán như hỉnh vẻ b: Thời điểm tiền trình P¬3 nhận thông điệp m2 được
+ghi vảo lát cắt nhưng việc ghi lại nảy không tương ứng với sự kiện gử!.
+
+5.4 Các giải thuật bầu chọn (Election Algorithm).
+
+khi tiễn trình điều phối gặp lỗi thì sẽ phải có quá trình bầu chọn đê chọn ra một
+tiên trình khác làm điều phối thay cho nó. Có hai giải thuật bầu chọn hay được
+sử dụng lả:
+
+5.4.1 Giải thuật áp đảo (Bully Algorithm)
+
+Với giả thiết:
+
+Mỗi một tiền trình đều có một ID duy nhất.Tất cả các tiền trình khác đều có thể
+biết được số ID và địa chỉ của mỗi tiễn trinh trong hệ thống.
+
+Chọn một tiên trình có ID cao nhất làm khóa.Tiễn trinh sẽ khởi động việc bầu
+chọn nếu như nó khôi phục lại sau quá trình xảy ra lỗi hoặc tiến trình điều phối
+bị trục trặc.
+Các bước của giải thuật:
+
+1.P gửi thông điệp ELEC đến tất cả các tiến trình có ID cao hơn
+
+2.Nếu không có tiến trình nảo phản hỗi thì P sẽ trở thành tiên trình điều phối
+3.Nếu có một tiên trinh có ID cao hơn phản hỏi thì nó sẽ đảm nhiệm vai trò
+điều phối.
+
+Hinh 29 .Ví dụ theo giải thuật áp đảo
+
+5.4.2 G1ải thuật vòng (Ring Algorithm)
+
+VỚI giả thiết :
+
+Các tiễn trình có một ID duy nhất và được sắp xếp trên I vòng tròn Logie. Mỗi
+một tiên trình có thê nhận biết được tiến trình bên cạnh mình.
+
+Các bước thuật toán:
+
+Một tiến trình bắt đầu gửi thông điệp ELEC tới các nút còn tồn tại gần nhất,
+quá trình gửi theo Ì hướng nhất định. Thăm dò liên tiếp trên vòng cho đến khi
+tim được Ì nút còn tồn tại.
+
+Mỗi một tiền trình sẽ gắn. ID của mỉnh vào thông điệp gửi.
+
+Cuối cùng sẽ chọn ra Ï tiền trinh có [D cao nhất trong sô các tiễn trình còn hoạt
+động và gửi thông điệp điều phối cho tiền trình đó.
+
+5.5 Loại trừ nhau (Mutual Exclusion).
+
+Tổ chức các "vùng tới hạn” (critial section region).
+
+Có nhiều giải thuật được xây dựng để cải đặt cơ chế loại trừ nhau thông qua
+các vùng tới hạn. Có ba giải thuật phố biến lả:
+
+3.5.1 Giải thuật tập trung (Centralized Algorithm)_
+
+Giả thiết: mỗi tiến trinh có một sô ID duy nhất. Tiên trình được bầu chọn làm
+điều phối là tiền trình có số hiệu ID cao nhất.
+
+Nội dung thuật toán: Khi một tiền trình nảo đó cần vào vùng giới hạn nó sẽ gửi
+một thông điệp xin cấp quyên Nếu không có một tiền trình nảo đang trong
+vùng giới hạn thi tiền trình điều phối sẽ gửi phản hồi cho phép. Còn nêu có một
+tiền trình khác đang ở trong vùn tới hạn rồi thì tiền trình điều phối sẽ gửi thông
+điệp từ chối và đưa tiễn trình nảy vảo hảng đợi cho đến khi không có tiền trình
+nảo trong vùng tới hạn nữa.
+
+Khi tiên trình một tiến trình rời khỏi vũng giới hạn nó sẽ gửi một thông điệp
+đến tiễn trình điều phối thông báo trả lại quyên truy cập.Lúc nảy tiền trình điều
+phối sẽ gửi quyên truy cập cho tiền trinh đầu tiên trong hàng đợi truy cập.
+Đánh giá : Thuật toán này có đảm bảo sự tôn tại duy nhất một tiễn trỉnh trong
+vùng tới hạn vả chỉ cần 3 thông điệp đề thiết lập là: Request -Grant -
+
+Release .Nhược điểm duy nhất là nếu tiến trình điêu phối bị hỏng thì hệ thống
+SẼ SỤp đồ .VÌ nêu một tiễn trinh đang trong trạng thái Block nó sẽ không thê
+biết được tiền trình điều phối có bị DEAD hay không .Trong một hệ thông lớn
+nêu chỉ có một tiên trình điều phối sẽ xuất hiện hiện tượng thắt cô chai
+
+Hinh 30 .ví dụ theo giải thuật tập trung
+3.3.2 Giải thuật phần tán (DIstributed Algorithm)
+
+Khi một tiền trình muốn vào vùng giới hạn, trước hết nó sẽ tạo ra một nhãn
+thời gian và gửi cùng với một thông điệp đến tất cả các tiến trình khác. Các tiên
+trỉnh khác sau khi nhận được thông điệp nảy sẽ xảy ra ba tỉnh huồng:
+
+Nếu bên nhận không ở trong vùng giới hạn và cũng không muốn vào vùng giới
+hạn thì nó sẽ gửi thông điệp OK cho bên gửi
+
+Nếu bên nhận đang ở trong vùng giới hạn thay vì trả lời nó sẽ cho vào hàng đợi
+yều cầu này.
+
+Nếu bên nhận cũng muốn vảo hàng đợi thì nó sẽ so sánh timestamp ai thấp hơn
+sẽ thắng.
+
+Sau khi gửi đi thông điệp yêu cầu vào vùng giới hạn tiền trình sẽ đợi cho đến
+khi có trả lời cảng sớm cảng tốt .Khi đã vảo vùng giới hạn rôi thì nó sẽ gửi
+
+thông điệp OK đến tất cả các tiên trình khác và xóa các tiễn trình trong hàng
+đợi đi.
+
+Hinh 3L. Ví dụ theo giải thuật phần tán
+
+3.5.3 Giải thuật vòng với thẻ bài (TokenRing Algorithm).
+
+Giả thiết tất cả các tiền trình được sắp xêp trên một vòng tròn logic, các tiền
+trình đều được đánh số và đều biết đến các tiễn trình cạnh nó.
+
+Bắt đầu quá trình truyên, tiến trình 0 sẽ được trao một thẻ bài. Thẻ bài này có
+thê lưu hành xung quanh vòng tròn logic. Nó được chuyên từ tiến trinh k đến
+tiên trỉnh (k†]) bằng cách truyền thông điệp điểm - điểm. Khi một tiến trình
+giảnh được thê bài từ tiền trình bên cạnh nó sẽ kiểm tra xem có thê vào vùng
+tới hạn hay không. Nếu không có tiền trình khác trong vùng tới hạn nó sẽ vảo
+vùng tới hạn. Sau khi hoản thành phần việc của minh nó sẽ nhà thẻ bài ra, thẻ
+bài có thê di chuyên tự do trong vòng trỏn. Nếu 1 tiễn trình muốn vào vùng tới
+hạn thì nó sẽ giữ lấy thẻ bài, nễu không nó sẽ đề cho thẻ bài truyền qua. Vẫn đê
+lớn nhất trong thuật toán truyền thẻ bài là thẻ bải có thẻ bị mất, khi đó chúng ta
+phải sinh lại thẻ bài bởi vì việc đỏ tìm lại thẻ bài là rất khó.
+
+Hinh 32. Ví dụ theo giải thuật vòng với thẻ bải
+
+3.0 Các giao tác phần tán (DIstributed Transactions).
+
+Bồn tính chất của giao tác đối với thế giới bên ngoài: ACID
+
+Tính nguyên tử (Atomic): mọi giao tác diễn ra không thể phân chia được.
+Tính nhất quán (Consistenf): giao tác không xâm phạm các bất biến của hệ
+thống.
+
+Tính cô lập (Isolated): các giao tác đồng thời không gây trở ngại cho nhau.
+Tính lầu bên (Durable): khi giao tác đã cam kết thì các thay đôi đối với nó
+không phải là tạm thời mà là kéo dải.
+
+5.6. Phân loại các giao tác
+Cao tác được chia thành các loại sau:
+Limition of Flat Transaction.
+
+Nested Transaction
+
+Distributed Transaction.
+
+5.6.2 Điều khiên tương tranh:
+
+Là quá trình cho phép nhiều giao tác thực hiện đồng thời mả không sảy ra sự
+tranh chấp giữa các giao tác. Có hai loại tương tranh:
+
+Tương tranh bị quan.
+
+Tương tranh lạc quan.
+
+Chương 6 : Nhất quán và nhân bản
+
+(Consisstency & replicafion)
+
+6.1 Đặt vẫn đề.
+
+Có hai ly do đề sử dụng bản sao:
+
+Dùng bản sao đề tăng độ tin cậy và tính sẵn sảng của hệ thống: khi dữ liệu bị
+lỗi hay vì một nguyên nhân nảo đó mà không thẻ dùng được, ta có thể dùng
+ngay bản sao dữ liệu đó đê hệ thống không phải dừng lại vả tránh được tình
+trạng sử dụng các dữ liệu không chính xác.
+
+Dùng bản sao để tăng hiệu năng của hệ thống: có thê tăng quy mô hệ thống cả
+về SỐ lượng lẫn phạm vi địa lý.
+
+Tuy nhiên việc sử dụng nhân bản cũng phải trả giá, đó là tính nhất quản dữ liệu
+của hệ thống bị suy giảm. Do sử dụng bản sao nên có thê xảy ra trường hợp có
+sự thay đổi trên một dữ liệu mả không cập nhật trên các bản sao của nó. Điêu
+nảy sẽ gây ra các sai sót trong hệ thống. Do đó phải tốn nhiều công sức để xây
+dựng các mô hỉnh đảm bảo tính nhất quán của dữ liệu.
+
+6.2 Các mô hình nhất quán lấy dữ liệu làm trung tâm.
+
+6.2.1 Mô hình nhất quản chặt (StrIcf consIstency).
+
+Là mô hình thỏa mãn điều kiện sau: Thao tác đọc bất kỷ trên mục dữ liệu x đều
+trả về một giá trị tương ứng với kết quả của thao tác ghi gần nhất trên x đó.
+
+Sử dụng khái niệm thời gian tuyệt đồi. ThỜ gian tuyệt đôi nảy là tông thê cho
+cả hệ thống đề xác định đúng khái niệm "gần nhất". Điều này lả khó khả thi với
+hệ phân tán.
+
+Các kỉ hiệu:
+
+- WI(x)a: thao tác ghi được thực hiện bởi tiền trình P(¡) lên mục dữ liệu x với
+giá frỊ a.
+
+- Ri(x)b: thao tác đọc được thực hiện bởi tiền trình P() lên mục dữ liệu x cho
+kết quả b.
+
+Giả thiết x có giá trị ban đầu lả null.
+
+Hình 33 (a). Mõ hinh nhất quản chặt. (b) Không phải là mô hình nhất quản chặt
+Do việc lan truyền cục bộ của P1 chưa tới P2 nên P2 đọc dữ liệu x vẫn là giả frỊ
+null ban đầu.
+
+Mô hình này là không khả thị nên đưa ra mô hình giảm nhẹ hơn.
+
+6.2.2 Mô hình nhất quán tuần tự và mô hình nhất quán tuyến tính.
+a. Mô hình nhất quản tuần tự.
+
+Là mô hình lỏng lẻo hơn, yêu hơn mô hình nhất quán chặt. Nó thỏa mãn các
+yêu cầu sau:
+
+Kết quả của sự thực hiện bất kỳ là như nhau niểu thao tác đọc và ghi do các tiền
+trình thực hiện trên mục dữ liệu một cách tuần tự và các thao tác của mỗi tiễn
+trình xuất hiện trong chuỗi thao tác nảy chỉ ra bởi chương trình của nó.
+
+Khi các tiễn trình chạy đồng : thời trên các máy khác nhau thì cho phép sự đan
+xen của các thao tác nhưng tất cả các tiến trình đều phải nhận biết được sự đan
+xen của các thao tác đó là như nhau.
+
+Hình 34 (a). Mô hình nhất quán tuần tự. (b) Không là mô hình nhất quán tuần
+tự.
+
+b. Mô hình nhất quán tuyến tính.
+
+Là mô hình yếu hơn mô hình nhất quán chặt nhưng mạnh hơn mô hình nhất
+quán tuần tự. Mô hình này thỏa mãn điều kiện sau: "Kết quả của bất kỉ sự thực
+hiện nảo là như nhau nêu các thao tác (đọc và ghi) của tắt cả các tiên trình lên
+dữ liệu được thực hiện mốt cách tuần tự vả các thao tác của mỗi tiền trình xuất
+hiện trong chuỗi thao tác này phải theo thứ tự đã được chỉ ra trong chương trình
+của nó. Thêm vảo đó, nêu tsopl(x) < tsop2(y) thì thao tác opl(x) phải được
+thực hiện trước op2(y) trong chuỗi thao tác"
+
+6.2.3 Mô hình nhất quán nhân quả.
+
+Đây lả mô hình lỏng lẻo hơn mô hình nhất quán tuần tự. Mô hình này phân biệt
+các sự kiện có quan hệ nhân quả vả các sự kiện không có quan hệ nhần quả.
+Nếu sự kiện b được gây ra hoặc bị tác động bởi một sự kiện a xảy ra sớm hơn
+thi tính nhân quả đòi hỏi mọi thực thê khác phải “nhìn” thấy a trước rồi mới
+thấy b sau.
+
+Mô hình nhất quán nhân quả thỏa mãn các điều kiện sau: các thao tác ghi có
+quan hệ nhân quả tiềm năng phải được nhận biết bởi tất cả các tiền trình khác
+trong cùng một thứ tự. Các thao tác ghi đông thời có thê nhận biết được theo
+thứ tự khác nhau trên các máy khác nhau.
+
+Hình 35 Mô hình nhất quản nhần quả.
+
+6.2.4 Mô hình nhất quán FIFO .
+
+Nhất quán FIFO còn được gọi là nhất quán PRAM. Đây là mõ hinh yêu nhất vì
+mô hình nảy bỏ qua giới hạn về trật tự của bất kì thao tác đồng thời nảo. Nhất
+quán FIFO thỏa mãn : "Các thao tác ghi bởi một tiễn trình đơn phải được tất cả
+các tiên trình khác nhìn thấy theo cùng một trật tự mà chúng đề ra. Nhưng thao
+tác ghi bởi nhiều tiên trình khác nhau có thê được thấy theo những trật tự khác
+nhau bởi các tiền trình khác nhau".
+
+Hình 36 Mô hình nhất quán FIFO.
+
+6.2.5 Mô hình nhất quán yêu (Weak consistenecy).
+Mô hình nhất quản yếu không tập trung vảo các thao tác trên dữ liệu như các
+mô hình trên mà chúng quan tâm đến trật tự các nhóm lệnh bằng việc sử dụng
+các biến được đồng bộ.
+
+Mô hình nhất quản yếu có ba đặc tính sau:
+
+s Việc truy cập đến một biến đồng bộ hóa được kết hợp với kho dữ liệu lả một
+nhất quán tuần tự.
+
+° Không có thao tác nảo lên các biên đồng bộ hóa được phép thực hiện cho đến
+khi tất cả các thao tác ghi trước đó được hoàn thành ở mọi nơi.
+
+° Không có thao tác đọc hay ghi dữ liệu lên các mục dữ liệu nào được phép
+thực hiện cho đến khi tất cả các thao tác trước đó lên các biên đồng bộ hóa
+được thực hiện.
+
+Hình 37 (a) Mô hình nhất quán yếu. (b) Không là mô hình nhất quán yếu
+
+6.2.6 Mô hình nhất quán đi ra (Release COISISf€ICY ).
+
+Sử dụng thêm hai lệnh: lệnh acquired để báo muốn vào vùng tới hạn (critial
+region) và lệnh release để báo giải phóng vùng tới hạn. Hai lệnh này cũng có
+hai cách thực thị khác nhau như: băng một biến hoặc bằng một lệnh đặc biệt.
+Hai thao tác này chỉ thực hiện với các dữ liệu dùng chung chứ không áp dụng
+cho tất cả các dữ liệu.
+
+Mô hình nhất quán đi ra thỏa mãn các điều kiện sau:
+
+- Trước khi thực hiện một thao tác đọc hay ghi lên dư liệu chia sẻ thì tất cả các
+thao tác acquire do tiên trình này thực hiện trước đó phải hoản tất.
+
+- Trước khi một thao tác release được phép thực hiện thi tất cả các thao tác đọc
+và ghi do tiên trình này thực hiện trước đó phải được hoản tất.
+
+- Truy cập vào các biên đồng bộ hóa là nhất quán FIFO (Không yêu cầu nhất
+quán tuần tự).
+
+Hình 38 Trình tự sự kiện theo mô hình nhất quản đi ra
+
+6.2.7 Mô hình nhất quán đi vào (Entry consistency).
+
+Cũng giống mô hình nhất quán đi ra, mô hình nhất quản đi vào cũng sử dụng
+hai lệnh acqurred vả release khi muốn sử dụng vào vùng tới hạn. Nhưng các
+lệnh này thao tác trên từng mục dữ liệu của vùng dữ liệu chia sẻ. Tiến trình nào
+muốn sử dụng mục dữ liệu thì phải đợi cho tất cả các tiên trình khác giải phóng
+mục dữ liệu đó.
+
+Hình 39 .Trình tự sự kiện theo mỗ hình nhất quán đi vảo.
+
+Đề ghi lên một mục dữ liệu, client phải có được biến đồng bộ hoá của mục đó
+trong chế độ dành riêng. Điêu đó có nghĩa là không client nào khác có thể sử
+dụng biên đó. Khi client cập nhật xong mục dữ liệu, thì nó giải phóng biến đó .
+Khi client muốn đọc một mục đữ liệu nào đó, nó phải có được biến đồng bộ
+hóa kết hợp ở chế độ không dành riêng. Nhiều client có thể giữ một biến đồng
+bộ hóa ở chế độ không dành riêng.
+
+Khi thực hiện một thao tác acquire, clienf lấy về phiên bản mới nhất của mục
+dữ liệu từ tiễn trình cuối củng thực hiện thao tác acquire trên biến đó.
+
+Nhất quán đi vảo phải thỏa mãn các điều kiện sau:
+
+- Một thao tác acquire để truy cập vảo một biến đồng bộ hóa không được phép
+thực hiện trong một tiên trình cho đến khi tất cả các cập nhật lên mục dữ liệu
+trong tiền trinh đó được thực hiện.
+
+- Trước khi một truy cập trong chế độ dành riêng của một tiền trình tới một
+biến đồng: bộ hóa được phép thực hiện thì không tiền trình nào khác còn được
+g1ữ các biến đồng bộ hóa, trong chế độ không dành riêng thi không cần yêu cầu
+như vậy.
+
+- Sau khi một truy cập trong chế độ dành riêng lên một biến đồng bộ hóa được
+
+thực hiện thì bất kỉ sự truy cập của tiến trình nảo khác trong chế độ không, dành
+riêng lên biên đó cũng không được thực hiện cho đến khi chủ nhân của biến
+
+đồng bộ thực hiện xong việc truy cập của mình.
+
+6.3 Các mô hình nhất quán lấy client làm trung tâm.
+
+6.3.1 Nhất quán cuối cùng (eventual consistency).
+
+Khi một dữ liệu có nhiều bản sao thì yều cầu đưa ra lả sau các thao tác cập nhật
+thì tất cả các bản sao cuối cùng lả phải bằng nhau. Yêu cầu này sẽ được thực
+hiện tốt nều mỗi client luôn chịu khó cập nhật cho các bản sao.
+
+Nếu các client là di động thi việc thực hiện yêu cầu trên gặp khó khăn hơn.
+
+Phải luôn đảm bảo răng ngay cả khi client thay đổi về vị trí vật lý thi việc sử
+dụng các bản sao cũng phải chính xác. Tức lả các bản sao luôn luôn lả nhất
+quản.
+
+6.3.2 Nhất quản đọc đều (monofonIc - wrIfe consIstency).
+
+Mô hình nhất quán đọc đều phải đảm bảo điều kiện sau:
+
+Một tiễn trình thực hiện thao tác đọc trên một mục dữ liệu thì phải đảm bảo bất
+ki thao tác đọc nảo cũng đều cho củng một kết quả hay kết quả gần đầy nhất.
+Mô hình nhất quán đọc đều đảm bảo rằng một client sẽ luôn nhìn thấy những
+dữ liệu mới hơn vả không bao giờ phải nhìn thấy những dữ liệu cũ hơn những
+gi mả minh đã đọc trước đó. Điều đó có nghĩa là khi một client thực hiện một
+thao tác đọc trên một bản sao rồi tiếp theo lại đọc trên một bản sao khác thi bản
+sao thứ hai kia ít nhất cũng phải được ghi giống với bản sao đầu tiên.
+
+Hinh 41 (a) Kho dữ liệu theo mô hình nhất quản đọc đều (b) Kho dữ liệu không
+theo mô hình nhất quán đọc đều
+
+Vẻ bản chất thì mô hình nảy lả phiên bản hướng người dùng của mô hình nhất
+quán FIFO (điểm khác biệt ở chỗ nó chỉ áp dụng đối với một client).
+
+6.3.3 Nhất quản ghi đều (monotonic - read consIstency).
+
+Mô hình nhất quán đọc đều phải đảm bảo điều kiện sau:
+
+Thao tác ghi trên mục dữ liệu x của một tiền trình phải được hoàn thành trước
+bất kỳ một thao tác ghi nào khác trên x bởi cùng một tiến trình.
+
+Nói cách khác thì các thao tác ghi lên một mục dữ liệu sẽ được sắp xếp một
+cách có trật tự.
+Hinh 42 (a) Kho dửữ liệu theo mô hình nhất quản ghi đều (b) Kho dữ liệu không
+theo mô hình nhât quản ghi đều.
+
+6.3.4 Nhất quán đọc kết quả ghi (Read - your - wrIfe consistency)
+Trong mô hình nhất quán nảy, người dùng được đảm bảo răng sẽ luôn được
+
+nhìn thầy những kết quả ghi mới nhất.
+“Tác động của một thao tác ghi của một tiên trình lên mục dữ liệu x sẽ luôn
+được nhìn thầy bởi một thao tác đọc lần lượt trên x của cùng tiên trình đó”.
+
+Hình 43 (a) Kho dử liệu theo mô hình nhất quán đọc kết quả ghi (b) Kho dữ
+liệu không theo mô hình đọc kết quả ghi
+
+6.3.5 Nhất quán ghi theo sau đọc (write - follow - read consistency).
+
+Mô hình nhất quản nảy ngược với nhất quán đọc kết quả ghi, nó đảm bảo rằng
+một người dùng sẽ luôn thực hiện thao tác ghi lên một phiên bản dữ liệu mả Ít
+nhất cũng phải mới bằng phiên bản cuối cùng của nó.
+
+Tác động bởi một thao tác ghi của một tiên trình lên mục dữ liệu x sẽ luôn
+được nhìn thấy bởi một thao tác đọc liên tiếp lên x của cùng tiên trinh đó".
+
+Hình 44 (a) Kho dửữ liệu theo mô hình nhất quản ghi theo sau đọc (b) Kho dữ
+liệu không theo mô hình ghi theo sau đọc.
+
+6.4 Các giao thức phần phối (distribution protocols).
+
+6.4.1 Xếp đặt các bản sao (replica placement).
+
+Có 3 kiều bản sao:
+
+Các bản sao thường trực: trong tiễn trình hay trên máy luôn có một bản sao. Số
+lượng các bản sao thường xuyên nảy rất ít, thường được tập hợp lại thành nhóm
+các máy trạm (COWS) hoặc trong các hệ thông phản chiều (mirrored), thường
+là các Web server hay là các server có chứa cơ sở dữ liệu dự phòng.
+
+Bản sao khởi đầu từ server: Các bản sao nảy được sử dụng đề làm tăng hiệu
+năng. Các bản sao nảy được xếp đặt động dựa vào yêu cầu của server khác.
+Một ví dụ điện hình lả chúng được các công ty web hosting sử dụng đề định vị
+vị trí địa lý của các bản sao gần nhất khi họ cần.
+
+Các bản sao khởi đầu từ client: Các bản sao nảy được tạo ra từ yêu cầu của
+client, chăng hạn như việc cache dư liệu của một trình duyệt. Chúng được xếp
+đặt động dựa vào yêu cầu của client.
+
+Hinh 45 Tô chức logic của các loại bản sao.
+
+6.4.2 Lan truyền các cập nhật
+
+Có 3 khả năng lan truyền các cập nhật
+
+Chỉ thông, báo là có cập nhật: Thường dùng trong việc cache dữ liệu. Thông bảo
+về việc mất hiệu lực của một giao thức.Phương pháp nảy tốt khi tỉ lệ các thao
+tác đọc so với thao tác ghi nhỏ.
+
+Truyền dữ liệu cập nhật từ bản sao này tới một bản sao khác. Thực hiện tốt khi
+có nhiều thao tác đọc. Ghi lại các thay đổi vả tập hợp các cập nhật lại để truyền
+đi (chỉ truyền đi các thay đổi chứ không truyền cả dữ liệu đã bị thay đổi, vỉ thế
+tiết kiệm được băng thông).
+Lan truyền các thao tác cập nhật tới các bản sao khác (nhân bản chủ động). Tốn
+ít băng thông nhưng đòi hỏi năng lực xử lý cao vì trong nhiêu trường hợp thì
+các thao tác là rất phức tạp.
+
+Các giao thức kéo và đây
+
+Đẩy cập nhật: lả giao thức do server khởi tạo, trong giao thức này các cập nhật
+được lan truyền mỗi khi có một server khác yêu cầu.
+
+Kéo cập nhật: là giao thức do client khởi tạo khi cHient muốn được cập nhật.
+
+6.4.3 Các giao thức bệnh dịch (epidemic protocol).
+
+Đây lả một giao thức có thê dùng đề thực hiện mô hình nhất quán sau cùng.
+
+Y tưởng cơ bản của thuật toán bệnh dịch lả:
+
+- Giả sử rằng không xảy ra xung đột giữa các thao tác ghi - ghi.
+
+- Các thao tác cập nhật ban đầu được thực hiện chỉ trên một hay một vải bản
+sao (cảng Ít cảng tốt).
+
+- Một bản sao chỉ gửi các cập nhật của nó tới một số hữu hạn các hảng xóm.
+
+- Việc lan truyền các cập nhật xảy ra chậm chạp và không phải ngay lập tức.
+
+- Cuối cùng thì mỗi cập nhật cũng đến được từng bản sao.
+
+Dựa trên thuật toán bệnh dịch mả có các mô hình lan truyền cập nhật. Điều
+đáng lưu tâm trong mô hình này lả các cập nhật được lan truyện tới các bản sao
+với cảng ít thông điệp càng tốt và cảng nhiều bản sao bị "nhiễm" các lan truyền
+cảng nhanh thì cảng tốt. Đến cuối cùng nếu bản sao nảo mà không lan truyền
+được cập nhật của mìỉnh thì nó sẽ bị loại bỏ. Tuy nhiên việc loại bỏ có thể sẽ
+không dễ dàng.
+
+Một trong những mô hình lan truyền cập nhật được gọi là: anti entropy. Trong
+mồ hỉnh này, mỗi bản sao cứ định kì lại chọn ngầu nhiên một bản sao khác và
+trao đồi những trạng thái khác nhau của minh, sau một thời gian thi cả 2 phía sẽ
+có những trạng thái giống hệt nhau.
+
+Một mô hình khác là gossiping. Trong mô hỉnh nảy một bản sao đã được cập
+nhật sẽ "kê" cho một số bản sao khác về những cập nhật của mình vì thế sẽ làm
+cho những bản sao đó bị nhiễm những cập nhật của mình.
+
+6.5 Các giao thức nhất quán.
+
+6.5.1 Giao thức Primary-based
+
+a. Các giao thức ghi từ xa
+
+Với giao thức nảy, tất cả các thao tác ghi được thực hiện chỉ trên một SCTV€T từ
+xa. Giao thức này thường được kết hợp với các hệ thống chủ khách truyền
+thống.
+
+Một dạng giao thức ghi từ xa là giao thức Primary-Backup.
+
+Nhược điểm của giao thức nảy là vân đề hiệu năng. Tất cả các thao tác ghi
+trong giao thức đều chiếm khá nhiều thời gian, đặc biệt là khi có giao thêm
+giao thức ghi theo khối được sử dụng.
+
+Ưu điểm của giao thức này là
+
+- Sử dụng giao thức ghi không theo khối để xử lý các cập nhật.
+
+- Tất cả các thao tác ghi có thể được gửi đến các bản sao dự phòng theo củng,
+một thứ tự, điều này tạo điều kiện thuận lợi khi thực thi mô hỉnh nhất quán tuần
+tự.
+b. Các giao thức ghi cục bộ
+
+Trong giao thức này một bản sao của mục dữ liệu được duy trì. Khi có yêu cầu
+thao tác shl, mục dữ liệu được nhân bản từ server ở xa chuyên đến server cục
+bộ. Việc nảy được gọi là tiếp cận theo kiêu di trú hoàn toản.
+
+Một vấn đề được đặt ra cho các tiễn trình sử dụng giao thức này đề đọc hoặc
+ghi lên các mục dữ liệu là: thời gian đề thật sự định vị được một mục dữ liệu có
+thê còn lớn hơn cả thời gian tiền trình sử dụng nó.
+
+Một dạng của giao thức ghi cục bộ là là giao thức Primary-backup. Trong giao
+thức nảy bản chính được di trú đến tiền trình đang muốn thực hiện việc cập
+nhật, rồi sau đó bản dự phòng sẽ được cập nhật.
+
+6.5. 2. Các giao thức Replicated-write.
+
+Trong các giao thức nảy, thao tác ghi có thê được tiễn hành tại bất kì bản sao
+nảo.
+
+Vi dụ:
+
+Một tiền trinh đặc biệt sẽ mang các thao tác cập nhật tới từng bản sao. Một tem
+thời gian Lamport có thể được sử dụng đề lấy các thao tác vẻ, tuy nhiên
+phương pháp nảy không được linh hoạt cho các hệ phân tán.
+
+Một phương pháp khác là sử dụng một bộ sắp xếp dãy, là một tiên trình để gán
+các số ID duy nhất cho mỗi cập nhật, sau đó truyền các cập nhật tới tất cả các
+bản sao.
+
+Cao thức nhân bản chủ động
+
+Trong giao thức nảy, các thao tác ghi được truyền đến tất cả các bản sao, trong
+khi các thao tác đọc được thực hiện cục bộ. Giao thức ghi có thê được truyền
+sử dụng giao tiếp point-to-point hay multicast. Ưu điểm của giao thức nảy là tất
+cả các bản sao đều nhận được các thao tác cùng lúc vả theo cùng một trật tự, vả
+nó cũng không cần đánh dẫu một bản chính hay phải gửi tất cả các thao tác tới
+một Server.
+
+Tuy nhiên giao thức nảy lại đòi hỏi phải truyền theo kiểu multicast động hoặc
+phải có một bộ sắp xếp dãy tập trung mả cả 2 phương pháp này đều khó có thể
+tiếp cận một cách linh hoạt.
+
+Trong giao thức nảy có một vấn đề cần quan tâm là "triệu gọi bản sao”. Để
+tránh cho một bản sao bị gọi quán nhiều lần, một bộ điều phối được gắn ở mỗi
+bên (client và server), điều nảy đảm bảo cho việc chỉ có một lời gọi vả một lời
+đáp được gửi đi.
+
+Cao thức Quorumbased
+
+Với giao thức nảy, các thao tác ghi được thực hiện trên một tập nhỏ nhất các
+bản sao. Khi thực hiện một thao tác đọc, người dùng cũng phải liên hệ với một
+tập các bản sao để tìm ra phiên bản mới nhất của dữ liệu.
+
+Trong giao thức nảy tất cả các mục dữ liệu được kết hợp với một SỐ phiên bản
+(version number). Mỗi lần một mục bị sửa đổi thì số phiền bản của nó cũng
+được tăng lên.
+
+Giao thức nảy định nghĩa ra số đại biểu đọc và số đại biêu ghi, hai đại biểu nảy
+sẽ xác định số bản sao phải được liên hệ trước khi thực hiện thao tác đọc và
+ghi. Số đại biêu đọc phải lớn hơn 1⁄2 tông số bản sao, vì thế tông của số đại biêu
+đọc và ghi phải lớn hơn tông số bản sao. Bằng cách này, một người muốn thực
+hiện một thao tác đọc thì phải đảm bảo việc liên hệ với ít nhất một bản sao có
+chứa phiên bản mới nhất của mục dữ liệu. Việc lựa chọn SỐ lượng đại biểu dựa
+vảo tỉ lệ giữa thao tác đọc và ghi cùng với cosf (bandwidth...) khi thực hiện
+phương pháp giao tiếp giữa các nhóm.
+
+Cache-coherence protocols
+
+Cache là một dạng đặc biệt của nhân bản, nó được điều khiển bởi client thay vì
+được điều khiến bởi server. Có nhiều giải pháp cho việc cache đữ liệu.
+
+Với chiến lược phát hiện sự cố kết, là chiên lược để xác định khi nào thì sự
+không nhất quán thật sự bị phát hiện và từ đó loại bỏ những dữ liệu gây ra sự
+không nhất quán, thì có 2 giải pháp khác nhau.
+
+- Với giải pháp tĩnh, tại thời điểm biên dịch chương trinh thì những chỉ thị phụ
+sẽ được thêm vảo để phát hiện những dữ liệu không nhất quán.
+
+- Với giải pháp động thì tại thời điêm chạy chương trình thỉ có những đoạn mã
+để kiêm tra tính không nhất quán của dữ liệu cache với dữ liệu của server.
+
+Với chiến lược ép buộc sự cố kết, là chiến lược để xác định xem dữ liệu cache
+được giữ nhất quán với dữ liệu lưu trên server như thể nào, thì có 2 cách để
+buộc giữ liệu phải cố kết với nhau. Đó là:
+
+- Đề cho server gửi đi một thông điệp về sự không hợp lệ mỗi khi dữ liệu bị
+thay đối.
+
+- Cập nhật các kĩ thuật lan truyền.
+
+Các thao tác ghi dữ liệu vảo cache được tiền hảnh như sau:
+
+- Với cache chỉ đọc ra (Read-only Cache) thỉ các cập nhật được thực hiện bởi
+S€TV€T (bằng giao thức đây) hoặc bởi client (bằng giao thức kéo mỗi khi client
+nhận thấy dữ liệu cache đã cũ).
+
+- Với cache ghi thăng (Write- Through Cache) thì client sẽ thay đổi nội dung
+của cache, sau đó sẽ gửi các cập nhật đến cho server.
+
+- Với cache ghi lại (Write-Back Cache) thì client tri hoãn sự lan truyền các cập
+nhật, cho phép nhiều cập nhật được tạo ra cục bộ sau đó gửi những cập nhật
+mới nhất cho server (việc nảy có khả năng ảnh hưởng mạnh đến hiệu năng).
+
+Chương 7: Chịu lỗi
+
+(Fault Tolerance)
+
+7.1 Chịu lỗi và một số khái niệm liên quan
+
+7.1.1 Một số khái niệm cơ bản.
+
+a. Các khải niệm.
+
+Tính chịu lỗi liên quan nhiều tới khái niệm hệ có thể tin cậy được (dependable
+system). Thuật ngữ "có thể tin cậy được” bao gồm các thuộc tính sau:
+
+Tính sẵn sàng (availability): hệ thống có tính sẵn sảng là hệ thông luôn sẵn
+sàng hoạt động tốt ở mọi thời điểm.
+
+Tính tin cậy (Reliability): một hệ thống có tính tin cậy lả hệ thống có khả năng
+hoạt động trong một thời gian dài mà không bị giản đoạn, không xây ra lỗi.
+Tính an toàn (Safety): hệ thống có tính an toàn là hệ thống mà khi xảy ra lỗi
+cũng không dẫn tới thảm họa. Các hệ thống cần phải có độ an toản cao là các
+hệ thống điều khiến.
+
+Khả năng bảo trì (Maintainability):hệ thống có khả năng bảo trì là hệ thống có
+khả năng phục hồi lại được sau khi có lỗi. Nêu sự phục hồi này diễn ra tự động
+thì có thể nói hệ thống nảy cũng có tính sẵn sảng cao.
+
+Tính chịu lỗi còn có liên quan tới khái niệm điều khiễn lỗi (Fault control). Điều
+khiển lỗi bao gôm ngăn ngừa lỗi, loại bỏ lỗi và dự báo lỗi với mục tiêu xây
+dựng thành công khả năng chịu lỗi cho hệ thông.
+
+b. Phân loại lỗi.
+
+Lỗi được phần chia thành các loại sau:
+
+Lỗi nhất thời (Transient faults): Là loại lỗi xuất hiện một lần rồi biến mất. Cách
+khắc phục: thực hiện lại hoạt động có lỗi nảy
+
+Lỗi lặp (Intermittent faults): Là loại lỗi mà chúng xuất hiện. rồi biền mất, sau
+đó lại xuất hiện lại vả cứ tiếp tục như thế. Lỗi nảy thường gây ra các hậu quả
+trầm trọng vì chúng rất khó xác định được.
+
+Cách khắc phục: sử dụng bộ sửa lỗi cho hệ thống (fault doctor) đê khắc phục
+lỗi.
+
+Lỗi lâu dải (Permanent faults):Là loại lỗi vẫn tồn tại ngay cả khi thành phần
+gây lỗi đó đã được sửa chữa.
+
+7.1.2 Các mô hình lỗi.
+
+Lỗi sụp đồ (crash faiure): khi server gặp lỗi nảy thì nó sẽ bị treo, trước đó
+server vẫn hoạt động tốt cho đến khi ngừng hoạt động. Khi server gặp lỗi này,
+nó sẽ không thể lảm gì được nữa. Một ví dụ hay gặp lỗi này là hệ điều hành của
+các máy cá nhân. Khi hệ điều hảnh ngừng hoạt động thì chỉ còn cách duy nhất
+là khởi động lại.
+
+Lỗi bỏ sót (omission failure): là lỗi mà một server không thê đáp ứng được yêu
+cầu gửi tới nó. Người ta chia nó thảnh hai loại:
+
+Lỗi khi nhận thông điệp gửi tới: gặp lỗi nảy, server không nhận được yêu cầu
+ngay cả từ client gần nó nhất và mặc dù kết nối giữa server với client đã được
+thiết lập. Lỗi khi nhận thông điệp chỉ làm cho server không nhận biết được các
+thông điệp gửi tới nó mà không Ï hề ảnh hưởng đến trạng thái của server.
+
+Lỗi khi gửi thông điệp: server vẫn nhận được các yêu câu, vần hoàn thành yêu
+cầu đó nhưng vỉ một lý do nào đó lại không thê gửi kết quả tới máy đã yêu câu.
+Một trong những lý do thường gặp là do bộ nhớ đệm gửi đầy. Trong trường
+
+hợp gặp lỗi nảy, server cần chuẩn bị tình huống clien sẽ gửi lại yêu cầu đã gửi
+đó .
+
+Lỗi thời gian (timing failure): là lỗi xảy ra khi server phản ứng lại quá chậm,
+sau cả thời gian cho phép. Trong một hệ thông luôn có các ràng buộc về mặt
+thời gian. Nếu bên gửi gửi đến bên nhận nhanh quá, bộ nhớ đệm của bên nhận
+không đủ đề chứa thì sẽ gây ra lỗi. Tương tỰ, S€TV€T phản ứng lại chậm quá,
+vượt quá khoảng timeout quy định sẵn cũng sẽ gây ra lỗi, ảnh hưởng đến hiệu
+năng chung của hệ thống.
+
+Lỗi đáp ứng (Response failure): là lỗi khi server trả lời không đúng. Đây là một
+kiểu lỗi rât ngiêm trọng vả được phân chia thành hai loại:
+
+Lỗi về mặt giá trị: là lỗi khi server trả lời lại yêu cầu của client với giả {TỊ
+không chính xác. Ví dụ khi sử dụng các máy tìm kiêm, kết quả trả về không hê
+liên quan gì tới yêu cầu của người sử dụng.
+Lỗi về chuyền trạng thái: là lỗi khi server hoạt động trệch hướng khỏi luồng
+
+điều khiển. Có nghĩa là server trả lời các yêu cầu được gửi tới một cách không
+theo như mong đợi.
+
+Lỗi bất kì (Arbitrary failure): một server có thê tạo ra một lỗi bất kì ở bất kì
+thời gian nảo. Đây là loại lỗi nguy hiêm nhất. Có thê có hai khả năng xảy ra:
+Thứ nhất: một server tạo ra một kết quả sai mà không thê phát hiện ra được.
+Thứ hai: server bị lỗi có liên kết với các server khác tạo ra một kết quả sai.
+
+Ta có thê xét một vảo lỗi bất kì hay gặp sau : lỗi fail-stop, lỗi fail-silent và lỗi
+fail-safe. Với fail-stop, server bị treo, ngừng hoạt động và có thông bảo tới các
+tiễn trỉnh khác. Với fail-silent, server đột ngột hoạt động chậm lại vi thê lảm
+cho các tiến trình không thê kết thúc được, ảnh hưởng đến hiệu năng của hệ
+thống. Lỗi fail-safe là lỗi mà khi server tạo ra kết quả ngẫu nhiên nhưng các
+tiên trình nhận dạng các kết quả này là không có giá trị.
+
+7.2 Các phương pháp che giấu lỗi.
+
+7.2.1 Che giấu lỗi băng dư thừa.
+
+Có ba loại dư thừa: dư thừa thông tin, dư thừa thời gian vả dư thừa vật lý.
+
+Dư thừa thông tin : bỗ sung thêm các bit dư thừa đề phát hiện lỗi và phục hồi
+lỗi. Ví dụ trong việc truyền dữ liệu thường thêm vào các bit kiêm tra chẫn lẻ,
+mã Haming, CRC... để phát hiện lỗi và khôi phục lỗi.
+
+Dư thừa thời gian: khi một hoạt động đã được thực hiện, nếu dư thừa thời gian
+nó có thê được thực hiện lại. Kĩ thuật dư thừa thời gian phủ hợp khi lỗi là ngắn
+và không liên tục. Ví dụ: khi một giao tác bị hủy giữa chừng, nó có thể được
+thực hiện lại mả không gây nguy hại gì.
+
+Dư thừa vật ly: bố sung thêm tải nguyễn
+
+7.2.2 Khôi phục tiến trình.
+
+a. Các vấn đề khi thiết kế.
+
+Nguyên tắc: tô chức các tiên trình giống nhau vảo củng một nhóm.
+
+Hoạt động: khi nhóm nhận được thông báo thi thông báo này sẽ được gửi tới tất
+cả các thành viên trong nhóm. Nếu có tiến trình nảo trong nhóm bị lỗi thì sẽ có
+tiên trình khác thay thê.
+
+Đặc điểm: các nhóm nảy có thê là động. Tính động thê hiện ở các mặt sau:
+
+Số lượng các nhóm là không có định: có thể tạo thêm hay hủy bỏ một nhóm.
+
+Số lượng các tiên trình trong cùng một nhóm là không cô định: một tiễn trinh
+có thể gia nhập hay rời khỏi nhóm.
+
+Một tiền trình có thể là thành viên của nhiều nhóm trong cùng thời điểm.
+
+Do tính động đó mả cần phải đưa ra các cơ chế quản lý nhóm: quản|, lý mỗi
+quan hệ giữa các nhóm vả quản lý thành viên trong một nhóm.
+
+Phần loại nhóm: dựa trên cầu trúc bên trong thi nhóm được phân thành hai loại:
+
+Nhóm ngang hàng:
+- Tất cả các tiến trình trong nhóm là ngang hảng nhau.
+- Khi thực hiện một công việc nảo đó sẽ phải có một quả trình bầu cử (vofte) đê
+xác định xem tiễn trình nảo phủ hợp đề thực hiện công việc đỏ.
+- Ưu điểm: khi một tiên trỉnh bị lôi thì chỉ làm cho kích thước của nhóm giảm
+đi chứ không ảnh hưởng đến hoạt động của cả nhóm.
+
+- Nhược điểm: do phải có quá trình bầu cử nên tốn thời gian (delay
+&overhead).
+
+Hinh 4ó. Nhóm ngang hảng.
+
+Nhóm phần cấp:
+
+- Trong mỗi nhóm sẽ có một tiễn trình giữ vai trò quản lý gọi là coordinator,
+còn các tiễn trình khác đóng vai trỏ thực hiện (worker). Các tiên trinh thực hiện
+chịu sự điều khiên của coordinator.
+
+- Khi có yêu cầu gửi đến nhóm, yêu cầu nảy sẽ được gửi tới coordinator.
+Coordinator sẽ quyết định xem tiến trình nào trong nhóm đảm nhiệm công việc
+đó một cách phù hợp nhất vả chuyên yêu cầu nhận được đến tiến trình đó.
+
+- Ưu điểm: không bị trễ như kiến trúc ngang hàng.
+
+- Nhược điểm: khi coordinator gặp sự cô thi toàn bộ hoạt động của nhóm sẽ bị
+dừng lại.
+
+Hinh 47. Nhóm ngang hàng
+
+Các phương pháp quản lý thành viên trong nhóm:
+
+Phương pháp l: dùng một server gọi lả Ø8roUD S€TVeT
+
+Server nảy chứa tất cả các thông tin về các nhóm và các thành viên của từng
+nhóm.
+
+Ưu điểm: hiệu quả, dễ sử dụng
+
+Nhược điểm: nếu server bị lỗi thì không thê quản lý được toản bộ hệ thống và
+các nhóm có thê phải xây dựng lại từ đầu các công việc mình đã thực hiện.
+Phương pháp 2: phương pháp phân tán.
+
+Khi tiễn trình muốn gia nhập hay rời khỏi nhóm thì nó phải gửi bản tin thông
+báo tới tất cả các tiên trình khác.
+
+Phương pháp 3: yêu cầu việc gia nhập/ rời khỏi nhóm phải đồng bộ với bản tin
+gửi hay nhận.
+
+Khi một tiền trình gia nhập nhóm nó sẽ nhận tất cả các bản tin từ nhóm đó.
+Khi một tiên trình rời khỏi nhóm thì nó sẽ không được nhận bất kì bản tin nảo
+từ nhóm đó nữa vả không một thành viên nảo của nhóm cũ nhận được các bản
+tin từ nó
+
+b. Che giấu lỗi và nhân bản.
+
+Có hai phương pháp nhân bản : bằng giao thức primary-based và bằng giao
+thức replicated-write
+
+Bảng giao thức primary-based: Các tiến trỉnh trong nhóm tô chức theo mô hình
+phân cấp. Nếu coordinator của nhóm chính dừng hoạt động thi coordinator của
+các nhóm sao lưu sẽ thực hiện các giải thuật để lựa chộn nhóm chính mới (mặc
+dù nó có thê đảm nhiệm công việc đó).
+
+Bảng giao thức replicated-write : Các tiên trỉnh trong nhóm tổ chức theo mô
+hỉnh nhóm ngang hàng. Vấn đề là cần nhân bản với số lượng là bao nhiêu
+
+7.2.3 Che giấu lỗi trong truyền thông client/server tin cậy.
+Việc che giấu lỗi trong hệ phân tán tập trung vào trường hợp có tiên trình bị lỗi.
+Nhưng ta cũng phải xét đến trường hợp các giao tiếp bị lỗi. Thông thường, một
+kênh giao tiếp có thể gặp các lỗi: lỗi sụp đỏ, lỗi bỏ sót, lỗi thời gian và lỗi tùy
+ý. Việc xây dựng một kênh truyền thông tập trung vào che giấu lỗi sụp đồ vả
+lỗi tùy ý.
+
+a. Truyền thông điểm - điểm .
+
+Trong hệ phần tán, truyền thông điêm - điêm tin cậy được thiết lập bằng cách
+sử dụng các giao thức truyền tin cậy như TCP. TCP che giấu được lỗi bỏ sót
+bằng cách dùng cơ chế thông báo ACK/NACK và việc thực hiện truyền lại.
+TCP không che giấu được lỗi SỤP ‹ đồ. Khi Xây Ta lỗi sụp đồ thì kết nối TCP sẽ
+
+bị hủy. Chỉ có một cách để che giấu lỗi sụp đồ là hệ thống phải có khả năng tự
+động tạo một kết nối mới.
+
+b. RPC khi xảy ra lỗi vả cách khắc phục
+
+Với hệ thông RPC, năm lớp lỗi có thê xảy ra lả:
+
+- Client không thê định vị được server: Nguyên nhân gây lỗi lả do server và
+client dùng các phiên bản khác nhau hoặc do chính server bị lỗi. Khắc phục
+bảng cách sử dụng các ngoại lệ (exception) đê bắt lỗi như ở ngôn ngữ java và
+điều khiễn tín hiệu (signal handle) như ở ngôn ngữ C. Hạn chế của phương
+pháp nảy là không phải ngôn ngữ nào cũng hỗ trợ ngoại lệ hay điều khiến tín
+hiệu. Nêu tự việt một ngoại lệ hay điêu khiên tín hiệu thị sẽ phá hủy tính trong
+suốt.
+
+- Bị mất bản tin yêu cầu từ client gửi đến server: Đây là loại lỗi dễ xử lý nhất:
+hệ điều hành hay client stub kích hoạt một bộ đêm thời gian (timer) khi gửi đi
+một yêu cầu. Khi timer đã trở về giá trị 0 mà không nhận được bản tin phản hỏi
+từ server thì nó sẽ gửi lại yêu cầu đó. Nếu bên client nhận thấy có quá nhiều
+
+yêu cầu phải gửi lại thì nó sẽ xác nhận rằng server không hoạt động vả sẽ quay
+lại thành kiêu lỗi không định vị được server"
+
+- Server bị lỗi ngay sau khi nhận được yêu câu từ client: Lúc nảy lại phần chia
+thánh hai loại:
+
+Loại Ì: Sau khi thực hiện xong yêu cầu nhận được thì server bị lỗi. Phương
+pháp khắc phục: sau đó server sẽ gửi thông báo hỏng cho client
+
+Loại 2: Vừa nhận được yêu cầu từ client server đã bị lỗi ngay. Phương pháp
+khắc phục: client chỉ cần truyền lại yêu cầu cho. Vấn đề đặt ra lúc này là clienf
+không thê nói cho server biết yêu cầu nảo lả yêu cầu được gửi lại.
+
+Khi gặp lỗi kiêu nảy, ở phía máy server sẽ thực hiện theo 3 kĩ thuật sau:
+
+Kĩ thuật I: đợi đến khi nảo server hoạt động trở lại, nó sẽ cô thực hiện yêu cầu
+đã nhận được trước khi lỗi đó. Như thế RPC thực hiện ít nhất một lần.
+
+Kĩ thuật 2: server sau khi được khôi phục nó sẽ không thực hiện yêu cầu nhận
+được trước khi bị lỗi mà sẽ gửi lại thông báo hỏng cho client biết để client gửi
+lại yêu cầu. Với kĩ thuật này thì RPC thực hiện nhiều lần nhất.
+
+Kĩ thuật 3: không, thực hiện gì để đảm bảo cả. Khi server bị lỗi, client không hề
+hay biết gì cả. Kiểu nảy, RPC có thê được thực hiện nhiều lần cũng có thê
+không thực hiện lần nảo.
+Còn ở client thì có thê thực hiện theo 4 chiến lược sau:
+
+Một là: Client không thực hiện gửi lại các yêu cầu. Vì thế không biết bao giờ
+yều cầu đó mới thực hiện được hoặc có thể không bao giờ được thực hiện.
+
+Hai là: Client liên tục gửi lại yêu cầu: có thẻ dẫn tới trường hợp một yêu cầu
+được thực hiện nhiều lần.
+
+Ba là: Client chỉ gửi lại yêu cầu nảo đó khi không nhận được bản tin ACK phản
+hồi từ server thông báo đã nhận thành công. Trường hợp nảy, server dùng bộ
+đếm thời gian. Sau một khoảng thời gian xác định trước mà không nhận được
+ACK thi client sẽ gửi lại yêu cầu đó.
+
+Bồn là: Client gửi lại yêu cầu nêu nhận được thông báo hỏng từ server.
+
+- Mắt bản tin phản hồi từ server gửi trả về client: Phương pháp khắc phục: thiết
+kế các yêu cầu có đặc tính không thay đổi giá trị (idempotent). Client đảnh SỐ
+thứ tự cho các yêu cầu, server sẽ nhận ra được đâu lả yêu câu đã được gửi lại
+nhờ các số tứ tự nảy. Do đó server sẽ không thực hiện lặp lại các yêu cầu. Tuy
+nhiên server vẫn phải gửi trả về bản tin thông báo yêu cầu nảo bị thất lạc. Hoặc
+ta có thê sử dụng một bit ở phần header của yêu cầu đề phân biệt yêu cầu nào lả
+yêu cầu đã được gửi lại.
+
+- Client bị lỗi ngay sau khi gửi yêu cầu tới server: Client gửi yêu cầu tới server
+rôi bị lỗi trước khi nhận được trả lới từ Server gửi về. Công việc mà server thực
+hiện nhưng không có đích nảo đợi để nhận được gọi là một ”“orphan”. Như thế
+sẽ gầy lãng phí chu ki CPU.
+
+Có 4 giải pháp được đưa ra trong trường hợp này lả:
+
+Một là: trước khi gửi đi yêu câu nào đó, client stub sẽ tạo ra một bản ghi xác
+định công việc cần thực hiện này và lưu lại. Như thế, khi được phục hồi sau khi
+lỗi, client sẽ lấy lại bản ghi đó và và việc thực hiện các orphan đang diễn ra sẽ
+dừng lại. Phương pháp nảy có nhiều nhược điểm: Chi phí đề trang bị đĩa để lưu
+lại mỗi bản ghi cho mỗi RPC. Orphan có thê tự mình thực hiện RPC tạo ra một
+grandorphan nên rất khó xác định.
+
+Hai là: chia thời gian hoạt động liên tục của client thành các số liên tục gọi lả
+các thời kì. Mỗi khi các clietn khôi phục trở lại thì số chỉ thời kì nảy lại tăng
+lên một đơn vị. Lúc nảy clietn sẽ gửi thông báo đến tất cả các máy khác thông
+báo số thời kỉ mới của mỉnh. Khi nhận dược thông báo nảy thì các orphan sẽ
+dừng lại
+
+Ba là: khi nhận được bản tin thông báo thời kì mới, mỗi máy sẽ kiêm tra xem
+mỉnh có đang thực hiện một tính toán từ xa nảo đó không. Nếu có, máy đó sẽ
+cô xác định xem client nảo đã gửi yêu cầu này. Nêu không xác định được thì
+quá trinh tính toán nảy sẽ bị hủy bỏ.
+
+Bồn là: quy định mỗi RPC chỉ có một khoảng thời gian xác định T đề thực
+hiện, sau khi gặp lỗi, clietn sẽ phảo đợi thêm một khoảng thời gian T trước khi
+khởi động lại để nhận các orphan. Vẫn đề đặt ra là phải lựa chọn giá trị T như
+thế nảo cho hợp lý.
+
+7.2.4 Che giấu lỗi trong truyền thông nhóm tin cậy (dùng multicasting)
+
+a. Multicasting tin cậy cơ bản (Basic Reliable-multicasting).
+
+Sau khi các tiên trình đã được phân nhóm thì một tiền trình khác muốn thực
+hiện multicast tức là sẽ gửi bản tin tới tất cả các tiễn trình trong nhóm đó.
+Multicast tin cậy là phải có cơ chế đê đảm bảo bản tin đó đến được tất cả các
+thảnh viên trong nhóm. Khi xảy ra lỗi thì sẽ áp dụng phương pháp sau đề che
+giấu lỗi:
+
+Phương pháp: đánh số các bản tin cần gửi. Các bản tin được lưu tại một buffer
+của bền gửi và vẫn lưu ở đó cho đến khi nhận được bản tin ACK báo về tử bên
+nhận. Nếu bên nhận xác định là bị mất một bản tin nảo đó thi nó sẽ gửi về một
+bản tin NACK để vyều cầu gửi lại. Và thông thường, bên gửi sẽ tự động gửi lại
+bản tin sau trong khoảng thời gian xác định nảo đó mả nó không nhận được bản
+tin ACK báo vê.
+
+Hình 48. (a). Truyền bản tin (b). Bản tin phản hồi
+
+b. Multicast tin cậy mở rộng.
+
+Đề tăng hiệu quả công vệc khi làm việc với một SỐ lượng lớn các tiền trình thì
+đưa ra mô hình multicast tin cậy mở rộng. Với mồ hình này sẽ không gửi trả về
+bản tin ACK báo nhận thành công mà chỉ gửi trả về cho tiễn trình nhận bản tin
+NACK thông báo khi có lỗi truyền. Việc nảy được thực hiện bằng giao thức
+SRM (Scalable Reliable Multicasting).
+
+Đề có thể thực hiện mulficasf tin cậy cho một nhóm lớn các tiễn trình thì thực
+hiện tô chức các nhóm theo cấu trúc dạng cây. Cấu trúc của cây :
+
+- Gốc là nhóm chứa tiến trình gửi.
+
+- Các nút là các nhóm có chứa tiên trình nhận.
+
+Hinh 49. Multicast tin cậy dạng cây
+
+Việc thực hiện multicast được thực hiện cho các nhóm nhỏ đỏ. Việc chia thành
+các nhóm nhỏ hơn này cho phép sử dụng các kịch bản multIcast tin cậy cho
+từng nhóm nhỏ đó.
+
+Trong mỗi nhóm nhỏ sẽ đề cử một tiền trình làm coordinator. Coodinator có
+khả năng điêu khiên việc truyền lại khi nhận được thông báo truyền lỗi.
+Coodinator của mỗi nhóm sẽ có bộ đệm (history buffer) riêng.
+
+- Nêu Coordinator của mỗi nhóm không nhận được bản tin m thì nó sẽ gửi yêu
+cầu truyền lại tới coordinator của nút cha nó.
+
+- Trong kịch bản truyền tin cậy sử dụng bản tin ACK thì khi coordinator nhận
+thành công một bản tin m nó sẽ gửi bản tin ACK tới coordinator của nút cha
+nó.
+
+- Nếu coordinator của một nhóm nhận được bản tin ACK báo nhận thành công
+bản tin m của tất cả các tiên trình trong nhóm gửi về thì nó sẽ xóa bản tin m
+khỏi bộ đệm của nó.
+
+Đánh giá: với phương pháp phân cáp này thì xảy ra vẫn đề về cấu trúc cây. Rất
+nhiều trường hợp yêu cầu cây phải có câu trúc động nên phải có một cơ chế tìm
+đường cho cây nảy
+
+c. Multicast nguyên tử (Atomic multicast ).
+
+Tư tưởng chính: khi một tiền trình muốn gửi bản tin cho một tập các tiến trình
+khác theo kiêu multicast, nó sẽ không gửi bản tin tới tất cả các tiến trình của
+nhóm chứa các tiễn trình nhận mà chỉ gửi đến một nhóm nhỏ các tiễn trỉnh cần
+nhận bản tin đó.
+
+Vẫn đề đặt ra: phải đảm bảo gửi được bản tin tới tất cả các tiễn trình trong
+nhóm hoặc không được gửi tới bất kì tiễn trình nảo nếu một tiễn trình trong
+nhóm bị lỗi sụp đồ.
+
+Một SỐ thuật ngư:
+
+Group view (khung nhìn nhóm): ý tưởng chính của atomic multicast là một tiễn
+trinh thực hiện multicast bản tin m thi chỉ thực hiện liên kết tới một danh sách
+các tiền trình cần nhận bản tin m đó chứ không phải toàn bộ nhóm. Danh sách
+các tiên trình nảy tương ứng với một khung nhìn nhóm (group view)- một tập
+nhỏ các tiền trình của một nhóm lớn.
+
+View change (thay đối khung nhìn): khi đang thực hiện multicast tới một group
+view G mả có một tiên trình xin gia nhập nhóm hay xin ra khỏi nhóm thì sự
+thay đổi ve này sẽ được gửi tới tất cả các thành viên còn lại trong nhóm. Do đó,
+các tiên trình còn lại trong Gï sẽ nhận được hai bản tin:
+
+m: bản tin cần nhận
+
+vc: bản tin thông bảo có thay đổi trong G.
+
+Nếu tất cả các tiễn trình trong Œ đều chưa nhận được ve thi thao tác multicast
+bản tin m được thực hiện.
+
+Nếu một trong số các tiến trình trong G đã nhận được ve thì phảo đảm bảo rằng
+không một tiễn trình nào khác trong G được nhận m nữa
+
+Đồng bộ ảo (Virtual sychronous).
+
+Tư tưởng chính: đảm bảo bản tin chỉ được multIcast tới tất cả các tiên trình
+không có lỗi. Nếu tiến trình gửi bị sụp đồ trong quá trình multicast thì quả trình
+này bị hủy ngay dù bản tin đó đã được gửi tới một vài tiễn trình khác trong
+nhóm rồi.
+
+Hình 50 Nguyên lý đồng bộ ảo
+
+l: PI tham gia vào nhóm đã có sẵn ba thành viên: P2.P3, P4.
+
+2: P2 thực hiện multicast bản tin tới tất cả các tiễn trình còn lại.
+
+3: P1 thực hiện multicast bản tin tới tất cả các tiễn trình còn lại.
+
+4: P3 multicast tới tiến trình P2, P4 thảnh công nhưng P1 chưa nhận được thì
+P3 bị sụp đồ. Lúc này đồng bộ ảo sẽ hủy tất cả các bản tin đã được gửi trước đó
+cho P2, P4, thiết lập trạng thái trước khi sụp đồ của P3 là chưa gửi bản tin dó.
+5: nhóm lúc nảy chỉ còn PI, P2, P4 vả P4 thực hiện multicast bản tin,
+
+6: P3 được khôi phục và xm gia nhập lại nhóm.
+
+7: P3 gia nhập nhóm thành công.
+
+7.3 Cam kết phân tán.
+
+Mô hình thiết lập cam kết phải là mô hình phân cấp vả coordinator lãnh trách
+nhiệm thiết lập cam kết phân tán. Ở cam kết một pha đơn giản, coordinator
+thông bảo với tất cả các thành viên còn lại hoặc lả thực hiện hoặc là không thực
+hiện một thao tác nảo đó. Nếu thành viên nào đó không thực hiện được cũng
+không thê báo lại cho coordinator biết. Do đó người ta đưa mô hình mới đó là
+cam kết hai pha và cam kết ba pha
+
+7.3.1 Cam kết hai pha.
+Xét một giao dịch phân tán với các thành viên là một tập các tiên trình chạy ở
+một máy khác với giả thiết không có lỗi xảy ra.
+
+Cam kết hai pha gồm hai: Pha bầu cử (voting phase )và pha quyết định
+(DecIsion phase).
+
+Với pha bầu cử: bao gồm hai bước thực hiện:
+
+- Coordinator gửi một bản tin thông báo yêu cầu bầu cử VOTE_REQUEST tới
+tất cả các thành viên trong nhóm.
+
+- Sau khi nhận được bản tin VOTE_ REOQUEST của coordinator, nếu có thê
+thực hiện được thi thành viên đó sẽ gửi lại cho coordinator thông báo chấp
+nhận bầu cử VOTE_COMMITT, nêu không, sẽ gửi lại cho coordinator thông
+báo từ chối VOTE_ABORITT.
+
+Pha quyết định: gồm hai bước thực hiện:
+
+- Coordinator tập hợp tất cả các bầu cử của các thành viên. Nếu tất cả đều
+đồngý chấp nhận giao dịch thì coordinator sẽ gửi một bản tin
+
+GLOBAL COMMIT tới tất cả các thành viên. Tuy nhiên, chỉ cần một thành
+viên gửi thông báo từ chối thì coordinatorquyết định hủy giao dịch trên và sẽ
+gửi một bản tin GLOBAL__ABORT cho tất cả các thành viên trong nhóm.
+
+- Các thành viên sau khi đã gửi thông bảo chấp nhận tới coordinator sẽ đợi
+phản hồi tử coordinator. Nếu nó nhận vẻ thông báo GLOBAL _ COMMIT thì
+giao dịch sẽ được chấp thuận. còn nêu nhận được GLOBAL ABORT thi giao
+dịch sẽ bị hủy.
+
+Cam kết hai pha đưa ra một sơ đồ các trạng thái hữu hạn như hình 7.17 a, b
+(394).
+
+Các trạng thái của một coordinator là: INIT, WATT, ABORET, COMMITIT. Còn
+các trạng thải của một thành viên bất kì là : INIT, READY, ABORFT,
+COMMILIT.
+
+Hinh ŠT (a) Máy trạng thái hữu hạn cho coordinator trong cam kết 2 pha (b).
+Máy trạng thái hữu hạn cho thành viên
+
+Nhược điểm của cam kết hai pha: Nhược điểm chính của cam kết hai pha là tốn
+nhiều thời gian chờ đợi. Cả coordinator vả các thành viên còn lại đều phải chờ
+một bản tin nảo đó được gửi đến cho mình.
+
+Nhược điểm thứ hai là nếu coordinator bị lỗi thì hoạt động của cả hệ thống sẽ
+bị ảnh hướng.
+
+7.3.2 Cam kết 3 pha
+
+Đề khắc phục nhược điểm của cam kết hai pha trong trường hợp coordinator bị
+lỗi, người ta đưa ra mô hình cam kết ba pha. Các trạng thái khá giống hai pha
+nhưng thêm một trạng thái PRECOMMILT.
+
+Hinh 52 (a) Máy trạng thái hữu hạn cho coordinator trong cam kết 2 pha (b).
+Máy trạng thải hữu hạn cho thành viên
+
+7.4 Phục hồi.
+
+Phục hồi là các phương pháp đưa trạng thái bị lỗi sang trạng thái lành (fault
+Iree). Có hai cách tiếp cận cho phục hôi lỗi: phục hồi lùi (back forward) vả
+phục hỏi tiền (forward recovery).
+Phục hồi lùi: khi thực hiện phục hôi lùi sẽ thực hiện phục hỗi trạng thái lành
+của hệ thống trước khi có lỗi và cho hệ thống chạy lại từ điểm đó. Đề có thê
+thực hiện được điều nảy phải sử dụng các điểm checkpoint. Tại các điểm này
+sẽ sao lưu trạng thải hiện hành của hệ thống để khi khôi phục sẽ cho chạy Ở
+điểm checkpoint gần nhất. Việc thực hiện theo phương pháp nảy là rất tổn kém.
+
+Phục hồi tiền: chuyên hệ thông từ trạng thái lỗi sang trạng thái mới với các
+thông tin đề tiêp tục thực hiện
+
+Chương 8: An toản - An ninh.
+
+(Security)
+8.1 Đặt vân đề.
+
+§.1.1 Các mối đe dọa, chính sách và cơ chế an toản , an ninh.
+
+a. Các mối đe dọa.
+
+Hệ thống máy tính luôn bị đe dọa bởi các nguy cơ mất an toản. Một trong
+những công việc để bảo vệ hệ thông lả làm sao giúp hệ thống tránh khỏi các
+nguy cơ đó. Có 4 loại các mối đe dọa an toản:
+
+Interception (chặn bắt): chỉ thành phần không được phép cũng có thể truy cập
+đến các dịch vụ hay các dữ liệu, "nghe trộm” thông tin đang được truyền đI.
+Interruption (đứt đoạn): là mối đe dọa mà làm cho dịch vụ hay dư liệu bị mất
+mát, bị hỏng, không thê dùng được nữa..
+
+Modification (thay đổi): lả hiện tượng thay đổi dữ liệu hay can thiệp vảo các
+dịch vụ lảm cho chúng không còn giữ được các đặc tỉnh ban đầu.
+
+Fabrication (giả mạo): là hiện tượng thêm vào dữ liệu ban đầu các dữ liệu hay
+hoạt động đặc biệt mả không thê nhận biết được để ăn cắp dữ liệu của hệ thống.
+
+b. Các cơ chế an toản, an ninh.
+
+Có 4 cơ chế an toàn, an ninh được đưa ra:
+
+Mật mã (Cryptography): là việc thực hiện chuyển đổi dữ liệu theo một quy tắc
+nảo đó thảnh dạng mới mà kẻ tắn công không nhận biết được.
+
+Xác thực (Authentication): là các thao tác đề nhận dạng người dùng, nhận dạng
+client hay server..
+
+Ủy quyên (tifHgiizsifgBìj" chính là việc phân định quyền hạn cho mỗi thành
+phần đã đăng nhập thành công vảo hệ thống. Quyền hạn này là các quyền Sử
+dụng dịch vị, truy cập dữ liệu...
+
+Kiêm toán (Auditing): là các phương pháp để xác đỉnh được client đã truy cập
+đến dữ liệu nào và bằng cách nảo.
+
+8.1.2 Các vẫn đề khi thiết kế.
+
+a. Điều khiên (focus of control).
+
+Có ba cách tiếp cận:
+
+Chống các thao tác bất hợp lệ: việc nảy thực hiện bằng cách bảo đảm toản vẹn
+chính các dữ liệu đó mà không quan tâm đến việc phân tích sự hợp lệ của thao
+tác.
+
+Hình 53 Chống các thao tác bất hợp lệ
+Chống các triệu gọi thao tác không được ủy quyên.: không bảo đảm toàn vẹn
+dữ liệu mả tập trung vào các thao tác. Thao tác nào lả bât hợp lệ sẽ bị hủy bỏ
+ngay.
+
+Hinh 54. Chống các triệu gọi thao tác không được ủy quyền
+
+Chống người sử dụng không được ủy quyên: ở cách tiếp cận này lại tập trung
+vào quản lý người dùng. Xác định người dùng vả các vai trỏ của họ trong hệ
+thông cứ không quan tâm đến đảm bảo dữ liệu hay quản lý các thao tắc của
+người dùng.
+
+Hinh 55. Chống người sử dụng không được ủy quyền
+
+b. Phân tâng các cơ chế an toàn (Layer 0f securIty mechanism)
+
+Một vấn để quan trọng trong việc thiết kế một hệ thống an toàn lả quyết định
+xem cơ. chế an toản an ninh được đặt ở tầng nảo. Việc xác định vị trí đặt đó phụ
+thuộc rất nhiều vảo yêu cầu của client về các dịch vụ an toản, an ninh của từng
+tầng.
+
+Trong một hệ phần tán, cơ chế an toàn, an ninh được đặt ở tầng middleware.
+
+c. Phân tán các cơ chế an toàn (Distribution of secur1ty mechanism)
+
+Xét khái niệm CB (Trusted Computing Base): là tập hợp tất cả các cơ chế an
+toản, an ninh trong hệ phân tán, các cơ chế này phải tuân theo một ràng buộc an
+toàn nảo đó.
+
+S.1.3 Mật mã (Cryptography)
+
+Một cơ chê an toàn, an ninh cơ bản trong hệ phân tán đó là mã mật. Tư tưởng
+cơ bản là: bên gửi mã hóa bản tin cần truyền, truyền bản tin đã mã hóa đi, bên
+nhận sẽ giải mã bản tin nhận được thành bản tin ban đầu.
+
+CIỌI:
+
+Bản tin ban đầu là P.
+
+Khóa mã hóa là Ek.
+
+Ban tin được mã hóa theo khóa Ek là C: C=Ek(P).
+
+Khóa giải mã là Dk.
+
+Bản tin được giải mã theo khóa giải mã: P=Dk(C).
+
+Có hai loại hệ thông mật mã: mật mã đối xứng (symmetric crypftosystem) vả
+mật mã bất đối xứng (asymmetrie cryptosystem)).
+
+a. Mật mã đối xứng: dùng khóa bí mật..
+
+Với mật mã đối xứng: khóa mã hóa vả khóa giải mã là giống nhau. Ta có:
+P=Dk(Ek( P )).. Cả bên nhận vả bền gửi đều phải có khóa trên, khóa phải được
+giữ bí mật.
+
+Nguyên lý chung của giải thuật DES (Data Encryption Standard):
+
+Hinh 56 nguyên lý chung của DES
+Thực hiện trên các khôi dữ liệu 64 bít. Mỗi khôi nảy được mã hỏa qua l6 vòng
+lặp, mỗi vòng có một khóa mã hóa 48 bịt riêng. l6 khóa nảy được sinh ra từ 56
+
+bit khóa chính.
+Đầu vảo của vòng lặp mã hóa thứ ¡ là dữ liệu đã được mã hóa của vòng lặp thứ
+(i-1). 64 bit đữ liệu qua mỗi vòng lặp được chia thảnh hai phần bằng nhau: Li-l
+và Ri-I, cùng bằng 32 bit . Phần dữ liệu bên phải Ri-I được lẫy làm phần bên
+trái của dữ liệu cho vòng sau: Ri-I= Li. Hảm f với đầu vảo là Ri-I vả khóa Ki
+sinh ra khối 32 bit được XOR với
+
+Li-1 đê sinh ra Ri.
+
+Hinh 57 .Một vòng mã hóa
+Phương pháp sinh khóa của giải thuật DES:
+
+Hinh 58. Sinh khóa theo giải thuật DES
+
+Mỗi khóa 48 bit cho mỗi vòng lặp được sinh ra từ khóa chính 56 bit như sau:
+hoán vị khóa chính, chia đôi thành hai phần 28 bit. Tại mỗi VÒNØ, mỗi một nửa
+đó sẽ quay trải một hoặc hai bit, sau đó lấy ra 24 bit kết hợp với 24 bit của nửa
+còn lại tạo ra khóa.
+
+b. Mật mã bắt đối xứng: dùng khóa công khai.
+
+Mật mã bắt đối xứng: khóa mã hóa và khóa giải mã là khác nhau. Ta có:
+P=DkD(EKkD (P )). Trong hệ thông nảy, một khóa sẽ được giữ bí mật còn một
+khóa sẽ được công khai.
+
+Xết giải thuật RAS (được đặt theo tên của các nhà phát mình ra nó:RIvest,
+Shamrr, Adleman)) :
+
+Cách sinh khóa của giả thuật RAS: thực hiện theo 4 bước:
+
+- Chọn 2 số chính lớn: p.„q
+
+- Lĩnh n =p.q vả z = (p-]l).(q-l)
+
+- Chọn một số d liên quan đến z
+
+- Lĩnh toán e sao cho e.d =l mod z.
+
+Như thê d có thể dùng để giải mã còn e dùng đê mã hóa. Ta có thể công khai
+một trong hai SỐ nảy, tùy thuật toán.
+
+Nguyên lý chung của giải thuật RAS:
+
+Coi bản tin được truyền đi là một dãy các số nhị phân. Chia bản tin m đó thành
+các khối có kích thước cô định mi sao cho 0<= mi <=m. Ở bên gửi, với mỗi
+khối mi sẽ tính một giá trị c¡ = mei (mod n) rồi gửi đi.Bên nhận sẽ giải mã bằng
+cách tính: mi = cdi (mod n).
+
+Như vậy, để mã hóa cần biết e và n còn đê giải mã thi cân biết d vả n.
+
+8.2 Kênh an toản (Secure channels).
+
+8.2. Xác thực (Authentification).
+
+a. Xác thực dựa trên khóa bí mật.
+
+Nguyên lý chung: bên gửi muốn giao tiếp với bên nhận sẽ gửi một yêu cầu A
+tới bên nhận. Bên nhận trả lời bằng một yêu cầu RB. Bên gửi sẽ mã hóa yêu
+cầu RB bằng khóa bí mật KA,B và gửi về cho bên nhận. Bên nhận xác thực
+được bên gửi nhờ nhận biết được yêu cầu RB mình đã gửi trong gói tin vừa
+nhận. Lúc này bên gửi muốn xác thực bên nhận sẽ tiếp tục gửi yêu cầu RA tới
+bên nhận. Bên nhận sẽ lại mã hóa RA bằng khóa bí mật KA,B đó và gửi về cho
+bên nhận. Và như thế bên nhận đã xác định được bên gửi, sau đó quá trình trao
+đồi sẽ được thực hiện.
+Hình 59 Xác thực dựa trên khóa bí mật
+Một mồ hỉnh cải tiên hơn là thu gọn số lượng bản tin chỉ còn lại 3 bản tin giữa
+bên nhận vả bên gửi.
+
+Hinh 60. Xác thực dựa trên khóa bí mật nhưng dùng 3 bản tin
+
+Nhưng hiện nay, giao thức hay được dùng là "reflection attack” như được mỗ tả
+trong hình vẽ sau:
+
+Hinh 61. Reflection Atfack
+
+b. Xác thực dựa trên trung tâm phân phối khóa.
+
+Nếu hệ thông gồm N host, mỗi host phải chia sẻ một khóa mật với N-I host
+khác thi hệ thống cần quản lý N. (N-1)/2 khóa, và mỗi host phải quản lý N-I
+khóa. Như vậy nêu N lớn sẽ rất khó khăn trong việc quản lý. Do đó, để khắc
+phục hiện tượng trên ta sử dụng trung tâm phân phối khóa KDC (Key
+Distribution Center).
+
+Tư tưởng chính: bên gửi sẽ gửi bản tin tới trung tâm phân phối khóa thông báo
+mình muốn giao tiếp với bên nhận. KDC sẽ gửi cho cả bên gửi và bên nhận
+một bản tin có chứa khóa bí mật KA,B. Bản tin gửi cho bên nhận sẽ được mã
+hóa bằng KA,KDC.. Bản tin gửi cho bên gửi sẽ được mã hóa bằng KB,KDC.
+
+Hinh 62 Nguyên lý của KDC
+
+Cách tiếp cận thứ hai là KDC sẽ gửi cả hai bản tin chứa khóa bí mật KA,KDC
+(KA,B) và KB,KDC (KA,B ) cho bên gửi và bên gửi có nhiệm vụ gửi cho bên
+nhận khóa đã được KDC mã hóa KB,KDC (KA,B ) đó.
+
+Hinh 63 Dùng ticket
+
+c. Xác thực dựa trên khóa công khai.
+
+Hình 64. Xác thực dựa trên khóa công khai.
+
+Bên gửi mã hóa yêu cầu băng khóa công khai K+B của bên nhận. Bên nhận
+này là nơi duy nhất có thê giải mã bản tin đó bằng K-B. Bên nhận sẽ mã hóa
+yêu cầu của bên ØửI cùng với yêu cầu của chính mình và khóa KA,B vừa tạo ra
+bảng khóa công khai K+A của bên gửi nhằm xác thực bên gửi. Cuối cùng, bên
+gửi sẽ gửi lại cho bên nhận yêu cầu RB của bên nhận đã gửi đi đề xác thực.
+
+S.2.2 Tính toản vẹn vả tính mật của thông điệp.
+
+a. Chữ kí số.
+
+Chữ kí số đê đảm bảo tính toàn vẹn của thông điệp.
+Có nhiều cách thiết lập chữ kí số cho thông điệp:
+Cách 1: dùng hệ mật mã khóa công khai là RSA.
+
+Hình 65 Chữ kí số cho một bản tin dùng khóa công khai
+Bên gửi sẽ mã hóa bản tin băng khóa riêng K-AÁ của mình, sau đó sẽ mã hóa
+tiếp nội dung bản tin và phiên bản chữ kí bằng khóa công khai K+B của bên
+nhận. Bản tin được mã hóa nảy sẽ được truyền đi cùng bản tin m. Bên nhận sau
+khi nhận được bản tin sẽ giải mã gói tin, lấy phiên bản chữ kí của m và so sánh
+với m để xác thực rằng bản tin này được gửi từ bên gửi đó và cũng để kiêm tra
+xem có thay đổi trên đường truyền hay không.
+
+Cách 2: dùng hàm băm.
+
+Hàm băm H dùng đề tính toán một bản tin có độ dải cố định là một chuỗi bit h
+từ một bản tin có độ dải tùy ý m. Nếu giả trị m thay bằng giả frị m' thì H(m))
+cũng có giá trị khác giá trị h = H(m), do đó ta có thê dễ đảng xác định được
+những thay đồi trên bản tin m trên đường truyền.
+
+Hình 66. Chữ kí số cho một bản tin dùng message digest
+
+Bên gửi sẽ tính toán các bản tin có độ dải cô định từ bản tin m và mã hóa bằng
+khóa riêng của mình. Bản tin được mã hóa nảy sẽ được truyền đi cùng bản tin
+m. Khi nhận, bên nhận giải mã bản tin và thực hiện so sảnh với bản tin m đã
+được truyền đi đề xác định được rằng bản tin này gửi từ bên gửi đó và đã được
+kí băng chữ kí số.
+
+b. Khóa phiên
+
+Trong một kênh trao đối an toàn, sau pha xác thực sẽ tiền hành truyền thông.
+Mỗi kênh truyền thông đỏ được xác định bởi một khóa phiên tương ứng. Khi
+phiên truyền kết thúc thì khóa phiên tương ứng cũng bị hủy bỏ.
+
+8.2.3 Truyền thông nhóm an toản
+
+a. Truyền thông nhóm bí mật
+
+Mô hình đơn giản là tất cả các thành viên trong nhóm sẽ cùng có một khóa bí
+mật đê mã hóa vả giải mã các bản tin. Điều kiện tiên quyết cho mồ hỉnh nảy lả
+phải đảm bảo rằng tât cả các thành viên trong nhóm phỉa giữ bia mật khóa đó.
+Mô hình thứ hai là dùng một khóa bí mật cho từng cặp thành viên trong nhóm.
+Khi một trong hai thành viên kết thúc phiên truyền thì thành viên còn lại vẫn sẽ
+dùng khóa đó để giao tiếp với thành viên khác trong nhóm. Với mô hình này
+phải duy trì tới N (N-1)/2 khóa.
+
+Mô hình thứ ba là dùng khóa công khai. Mỗi một thành viên trong nhóm sẽ
+phải duy trì một cặp khóa công khai vả khóa riêng, trong đó khóa công khai
+được dùng bởi tất cả thành viên trong nhóm.
+
+b. Server nhần bản an toản
+
+Việc nhân bản các server thường dùng trong việc chịu lỗi cho hệ phân tán
+nhưng đôi khi cũng được dùng đề đảm bảo tính tin cậy cho hệ thống.
+
+8.3 Kiểm soát truy nhập (Access Control).
+
+S.3.1 Các khía cạnh tổng quát trong kiêm soát truy cập.
+
+a. Ma trận kiêm soát truy cập (Access Control Matrix).
+
+Trong ma trận điều khiên truy cập. một hảng biêu diễn cho một chủ thể
+(subJecf), một cột biêu diễn cho một đối tượng (object). Cọi ma trận kiêm soát
+truy nhập là M. M[s.,o]: đưa ra danh sách các phép toán mà chủ thê s có thể yêu
+cầu trên đối tượng o. Khi một chủ thể s gọi một phương thức m của đối tượng o
+thì monitor sẽ kiêm tra trong danh sách M[s.,o]. nễu m không có trong danh
+sách nảy thì lời triệu gọi bị hủy bỏ.
+
+Thông thường hệ thống phải làm việc với rất nhiều user nên có hàng nghìn chủ
+thê cần quản lý. Do đó xây dựng một ma trận thực như trên là không hợp lý.
+Giải pháp đề ra là sử dụng danh sách kiêm soát truy cập.
+
+b. Danh sách kiêm soát truy cập (Access Control LISE).
+
+Môi một đối tượng sẽ duy trì một danh sách các truy cập hợp lệ của các chủ thê
+muốn truy cập nó gọi là ACL nhờ đó tránh được sự tồn tại của các enfry rồng
+như ở ma trận kiểm soát truy nhập.
+
+Hinh 67 sử dụng ACL
+
+c. Miền bảo vệ (Protection Domain8).
+
+Với việc sử dụng AÁCL, tuy đã khắc phục được nhược điêm của ma trận kiêm
+soát truy nhập nhưng vẫn có kích thước lớn nên đã đưa ra cách sử dụng miễn
+bảo vệ. Miễn bảo vệ lả một tập các cặp (đối tượng. truy cập hợp lệ), môi Cặp
+nảy sẽ cho ta một đối tượng và các thao tác hợp lệ trên nó. Mỗi một yêu câu
+đều thuộc một miền bảo vệ nào đó. Khi một yêu cầu gửi đến, monitor sẽ tìm
+trong miền bảo vệ tương ứng yêu cầu này.
+
+Đề đạt hiệu quả cao hơn, người ta dùng kết hợp miền bảo vệ với việc phân
+nhóm các đối tượng.
+
+8.3.2 Tường lửa (Firewall).
+
+Eirewall dùng để ngăn chặn các luông không được phép. Firewall có hai loại
+chính là:
+
+Packet - filtering gateway: loại nảy hoạt động như một router cho phép hoặc
+không cho phép gói tin chuyên qua mạng dựa trên địa chi nguồn và địa chỉ đích
+Ở phần header của gói tin. Loại nảy thường dùng đề ngăn chặn các gói tin từ
+ngoài đi vào trong mạng.
+
+Appllication - level gateway: loại firewall này không chỉ kiêm tra header của
+gói tin gửi đến hay gửi đi mà còn kiểm tra nội dung của gói tin đó. Một ví dụ
+đặc biệt cho loại nảy là proxygateway.
+
+S.4 Quản trị an toàn - an ninh (Security managemeri ).
+
+S.4.1 Quản trị khóa.
+
+a. Thiết lập khóa.
+
+Việc tạo ra khóa bí mật giữa bên truyền vả bên nhận được thực hiện như sau:
+Bên A và bên B đều tạo ra hai số lớn lả n và g - hai số này có thể được công
+khai. Bên A sẽ tạo ra một số lớn khác là x, bên B tạo ra số lớn y vả gIữ bí mật
+chúng. Bên A sẽ gửi cho bên B: n, g và (gx mod n). Bên B sẽ thực hiện tính (gx
+mod n)y= gxy mod n. do đó sẽ xác định được khóa bí mật x của bên A. Đồng
+thời, bên B cũng gửi cho bên A (gy mod n). Bên A thực hiện tính toán (gy mod
+n)x= gxy mod n nhờ đó cũng xác định được khóa bí mật y của bên B.
+
+Hinh 68 Nguyên lý của Difie - Hellman key exchange
+b. Phân phát khóa.
+Trong hệ mã mật đôi xứng, khóa bí mật tạo ra phải được truyền đi trên kênh
+mật riêng .
+
+Hinh 69 Phần phát khóa theo kênh riêng.
+
+Trong hệ mật mã dùng khóa công khai, khóa công khai phải đảm bảo cùng một
+cặp với một khóa bí mật. Khóa công khai được truyền đi như một bản rõ trên
+đường truyền và phải có hỗ trợ xác thực. Khóa bí mật được truyền đi trên một
+kênh riêng vả cũng phải được xác thực.
+
+Thông thường, khóa công khai thường đượcthay bằng một chứng chỉ khóa
+công khai (public - key certificate). Chứng chỉ nảy bao gồm một khóa công
+khai vả một xâu định danh để xác định được khóa mật liên kết với nó.
+
+b. Thời gian tồn tại của chứng chi.
+
+Khi cần hủy bỏ một chứng chỉ ta có thê thực hiện theo nhiều phương pháp:
+Cách 1: sử dụng danh sách các chứng chỉ bị hủy bỏ CRL (certification
+revocation list). Khi cllient kiểm tra một chứng chỉ thì nó cũng kiểm tra trong
+danh sách CRL đề kiểm tra xem chứng chỉ nảy đã bị hủy hay không. Như thế
+môi client phải được cập nhật danh sách này thường xuyên.
+
+Cách 2: mỗi chứng chỉ tự động hết hiệu lực sau một thời gian xác định nào đó.
+Nhưng nêu muốn hủy chứng chỉ trước thời gian đó thì vẫn phải dùng đến danh
+sách CRL như trên.
+
+Cách 3: giảm thời gian tồn tại có hiệu lực của một chứng chỉ xuống gần bằng 0.
+Khi đó client phải thường xuyên kiểm tra chứng chỉ đề xác đỉnh thời gian có
+hiệu lực của khóa công khai.
+
+S.4.2 Quản trị nhóm an toản.
+
+Xét nhóm 7, khóa mật CKG được chia sẻ với tất cả các thành viên của nhóm
+để mã hóa thông điệp của nhóm. Nhóm còn có thêm 1 cặp khóa công
+khai/riêng (KG+, KG-) để giao tiếp với các thành viên của nhóm khác.
+
+Tiến trình P muốn tham gia vào nhóm G sẽ gửi yêu cầu tham gia JR. RP (Reply
+pad) vả khóa bí mật KP,G được mã hóa sử dụng khóa công khai KŒ+ của
+nhóm. ]R được gán bởi P và nó được gửi đi cùng với chứng chỉ chứa khỏa
+công khai của P.
+
+Khi một thành viên nhóm Q nhận một yêu cầu từ P, nó sẽ xác thực P, xác định
+tem thời gian T đê đảm bảo rằng P vẫn còn giá trị tại thời điểm gửi. Sau đó lấy
+ra khóa công khai của P để kiêm tra tính hợp lệ của JR.
+
+Nếu P được chấp nhận vào nhóm, Q trả lại thông điệp GÀ nhận dạng P vả chứa
+N (nonce). RP được sử dụng để mã hóa khóa giao tiếp của nhóm CKO. P sử
+dụng khóa KŒ- để mã hóa cùng với CKG. Sau đó thông điệp GA được gán cho
+Q sử dụng khóa KP,G.
+
+8.4.3 Quản trị ủy quyền (Authorization management )
+
+Sử dụng capability để xác định quyền truy cập tài nguyên của tiễn trình chiếm
+giữ nó. Một capability lả một từ định danh 128 bit, câu trúc bên trong được mô
+tả như sau:
+48 bit đầu tiên được khởi tạo khi đối tượng được tạo ra bởi server của đối
+tượng. 48 bít này được gọi là server port.
+
+24 bịt tiếp theo được sử dụng để xác định đối tượng tại server đã định sẵn.
+
+§ bit tiếp theo xác định quyên truy cập của holder của capability
+
+Trường check (48bit cuỗi) được dùng để tạo ra một capability thật (không thê
+giả mạo được).
+
+Khi một đối tượng được khởi tạo, server của đối tượng đó chọn lây một trường
+check ngẫu nhiên và lưu trữ nó trong cả capability và trong cả table riêng của
+S€TV€T
+
+Sự ủy quyên(delegation)
+
+Sự ủy thác quyên truy nhập là một kỹ thuật quan trọng để thực thi sự bảo vệ
+trong hệ thông máy tính vả đặc biệt hơn là trong hệ phân tán. Ý tưởng cơ bản
+rât đơn giản: bằng VIỆC chuyên quyền truy nhập tử tiền trình nảy sang tiền trình
+
+khác, nó sẽ trở nên dễ đảng hơn đề phân tán công việc giữa các tiên trình mả
+không làm ảnh hướng tới việc bảo vệ tài nguyên.
+
+Có vải cách đề thực thị sự ủy quyền, một cách là sử dụng proxy.
+
